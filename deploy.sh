@@ -3,16 +3,16 @@ case $1 in
 
     echo "creating compiler container"
 
-    docker build . -t microservices-compiler
+    docker build . -t loga-compiler
 
-    docker run -v $(pwd):/home/compiler microservices-compiler
+    docker run -v $(pwd):/home/compiler loga-compiler
 
-    docker rmi microservices-compiler --force
+    docker rmi loga-compiler --force
 
     echo "compiled!"
 
   ;;
   "run")
-    docker-compose -p "microservices" up -d --force-recreate --build
+    docker-compose -p "loga" up -d --force-recreate --build
 ;;
 esac

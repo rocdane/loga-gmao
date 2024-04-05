@@ -16,7 +16,9 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>loga-cloud</module>
+        <module>cloud-server</module>
+        <module>naming-server</module>
+        <module>gateway-server</module>
     </modules>
 
     <properties>

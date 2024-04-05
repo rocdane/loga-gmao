@@ -1,17 +1,58 @@
 version: '3.8'
 services:
-  zipkin:
+  cloud-server:
+    image: cloud-server
+    restart: always
+    ports:
+      - "8888:8888"
+    networks:
+      loga:
+        ipv4_address: 172.20.0.2
+
+  naming-server:
+    image: naming-server
+    depends_on:
+      - cloud-server
+    restart: always
+    ports:
+      - "8761:8761"
+    networks:
+      loga:
+        ipv4_address: 172.20.0.3
+
+  zipkin-server:
     image: openzipkin/zipkin:latest
     restart: always
     ports:
-      - 9411:9411
+      - "9411:9411"
+    networks:
+      loga:
+        ipv4_address: 172.20.0.4
+
+  gateway-server:
+    image: gateway-server
+    depends_on:
+      - naming-server
+    environment:
+      EUREKA.CLIENT.SERVICEURL.DEFAULTZONE: http://naming-server:8761/eureka
+      MANAGEMENT.ZIPKIN.TRACING.ENDPOINT: http://zipkin-server:9411/api/v2/spans
+    ports:
+      - "8765:8765"
+    networks:
+      loga:
+        ipv4_address: 172.20.0.5
+
   zookeeper:
     image: confluentinc/cp-zookeeper:latest
     environment:
       ZOOKEEPER_CLIENT_PORT: 2181
       ZOOKEEPER_TICK_TIME: 2000
     ports:
-      - 22181:2181
+      - "22181:2181"
+    networks:
+      loga:
+        ipv4_address: 172.20.0.6
+
   kafka:
     image: confluentinc/cp-kafka:latest
     depends_on:
@@ -24,7 +65,11 @@ services:
       KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
     ports:
-      - 29092:9092
+      - "29092:9092"
+    networks:
+      loga:
+        ipv4_address: 172.20.0.7
+
   postgres:
     image: postgres:alpine3.19
     restart: always
@@ -33,4 +78,15 @@ services:
       POSTGRES_PASSWORD: Log@2024
       POSTGRES_DB: loga
     ports:
-      - 25432:5432
+      - "25432:5432"
+    networks:
+      loga:
+        ipv4_address: 172.20.0.8
+
+networks:
+  loga:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16
+          gateway: 172.20.0.1
