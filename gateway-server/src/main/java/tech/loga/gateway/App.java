@@ -20,6 +20,7 @@ public class App {
 
     @Autowired
     private Logger logger;
+
     @Autowired
     private Filter filter;
 

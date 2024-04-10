@@ -5,34 +5,50 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33794903-cec8-44ae-8f25-57bd4ee27e15" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-server/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-server/src/main/java/tech/loga/CloudServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-server/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-server/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-server/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-server/src/main/java/tech/loga/GatewayServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-server/src/main/java/tech/loga/gateway/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-server/src/main/java/tech/loga/gateway/AuthSession.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-server/src/main/java/tech/loga/gateway/Authentication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-server/src/main/java/tech/loga/gateway/Crypto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-server/src/main/java/tech/loga/gateway/Filter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-server/src/main/java/tech/loga/gateway/JwtService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-server/src/main/java/tech/loga/gateway/Logger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-server/src/main/java/tech/loga/gateway/Router.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-server/src/main/java/tech/loga/gateway/SessionErrorException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-server/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naming-server/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naming-server/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naming-server/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/auth/Credentials.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/auth/IPassport.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/auth/Passport.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/auth/PassportMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/auth/SessionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/auth/SessionErrorException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/auth/SessionResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/config/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/config/Authentication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/config/Crypto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/config/CustomizedResponseEntityExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/config/ErrorDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/config/JwtService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/config/Logger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/config/Security.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/user/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/user/UserAlreadyExistsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/user/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/user/UserDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/user/UserDTOMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/user/UserNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/user/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/user/UserResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-server/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-server/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-server/config" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-server/config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-server/config/gateway-server.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-server/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deploy.sh" beforeDir="false" afterPath="$PROJECT_DIR$/deploy.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loga-cloud/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loga-cloud/src/main/java/tech/loga/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entrypoint.sh" beforeDir="false" afterPath="$PROJECT_DIR$/entrypoint.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-server/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-server/src/main/java/tech/loga/gateway/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server/src/main/java/tech/loga/gateway/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-server/src/main/java/tech/loga/gateway/AuthSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server/src/main/java/tech/loga/gateway/AuthenticatedUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-server/src/main/java/tech/loga/gateway/Authentication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server/src/main/java/tech/loga/gateway/Authentication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-server/src/main/java/tech/loga/gateway/Filter.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server/src/main/java/tech/loga/gateway/Filter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/naming-server/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/naming-server/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/naming-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/naming-server/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,12 +56,26 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Record" />
+        <option value="Class" />
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2egBavkuP3GFIcLtieHDypKDhNc" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -54,31 +84,142 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.authentication-service.executor": "Run",
+    "Docker.docker-compose.yml.data-server: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
     "Docker.loga-gmao.executor": "Run",
+    "JUnit.SessionResourceTest.authenticate.executor": "Run",
+    "JUnit.UserResourceTest.allUser.executor": "Run",
+    "JUnit.UserResourceTest.executor": "Run",
+    "JUnit.UserResourceTest.find.executor": "Run",
+    "JUnit.UserResourceTest.register.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "dart.analysis.tool.window.visible": "false",
     "jdk.selected.JAVA_MODULE": "openjdk-19",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/rochdane/IdeaProjects/loga-gmao/gateway-server/src/main/resources",
+    "last_opened_file_path": "/home/rochdane/Documents/postgres/docker-compose.yml",
     "onboarding.tips.debug.path": "/home/rochdane/IdeaProjects/loga-gmao/loga-cloud/src/main/java/tech/loga/Main.java",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "show.migrate.to.gradle.popup": "false"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/authentication-service" />
+      <recent name="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/config" />
+      <recent name="$PROJECT_DIR$/authentication-service/src/main/resources" />
+      <recent name="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga" />
       <recent name="$PROJECT_DIR$/gateway-server/src/main/resources" />
-      <recent name="$PROJECT_DIR$/gateway-server/src/main/java/tech/loga/gateway" />
-      <recent name="$PROJECT_DIR$/gateway-server" />
-      <recent name="$PROJECT_DIR$/cloud-server" />
-      <recent name="$PROJECT_DIR$/cloud-server/discovery-server" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/gateway-server" />
       <recent name="$PROJECT_DIR$" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="tech.loga.auth" />
+      <recent name="tech.loga.user" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="tech.loga.user" />
+      <recent name="tech.loga.gateway" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.authentication-service">
+    <configuration name="authentication-service" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="openjdk-19" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="tech.loga.AuthenticationService" />
+      <module name="authentication-service" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SessionResourceTest.authenticate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="authentication-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tech.loga.auth.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tech.loga.auth" />
+      <option name="MAIN_CLASS_NAME" value="tech.loga.auth.SessionResourceTest" />
+      <option name="METHOD_NAME" value="authenticate" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserResourceTest.allUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="authentication-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tech.loga.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tech.loga.user" />
+      <option name="MAIN_CLASS_NAME" value="tech.loga.user.UserResourceTest" />
+      <option name="METHOD_NAME" value="allUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserResourceTest.find" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="authentication-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tech.loga.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tech.loga.user" />
+      <option name="MAIN_CLASS_NAME" value="tech.loga.user.UserResourceTest" />
+      <option name="METHOD_NAME" value="find" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.data-server: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="envFilePath" value="" />
+          <option name="services">
+            <list>
+              <option value="data-server" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <configuration name="loga-gmao" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
       <deployment type="dockerfile">
         <settings>
@@ -89,6 +230,24 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Application.authentication-service" />
+      <item itemvalue="Docker.loga-gmao" />
+      <item itemvalue="Docker.docker-compose.yml.data-server: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+      <item itemvalue="JUnit.SessionResourceTest.authenticate" />
+      <item itemvalue="JUnit.UserResourceTest.allUser" />
+      <item itemvalue="JUnit.UserResourceTest.find" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.docker-compose.yml.data-server: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+        <item itemvalue="JUnit.SessionResourceTest.authenticate" />
+        <item itemvalue="JUnit.UserResourceTest.allUser" />
+        <item itemvalue="JUnit.UserResourceTest.find" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>

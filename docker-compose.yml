@@ -1,6 +1,33 @@
 version: '3.8'
+
+x-kafka-server:
+  &kafka-config
+  environment:
+    SPRING_KAFKA_BOOTSTRAP_SERVERS: http://kafka:29092
+
+x-cloud-server:
+  &cloud-config
+  environment:
+    SPRING_CLOUD_CONFIG_URI: http://cloud-server:8888
+
+x-naming-server:
+  &discovery-config
+  environment:
+    EUREKA.CLIENT.SERVICEURL.DEFAULTZONE: http://naming-server:8761/eureka
+    MANAGEMENT.ZIPKIN.TRACING.ENDPOINT: http://zipkin-server:9411/api/v2/spans
+
+x-data-server:
+  &datasource-config
+  environment:
+    POSTGRES_USER: loga
+    POSTGRES_PASSWORD: Log@2024
+    POSTGRES_DB: loga
+
 services:
   cloud-server:
+    build:
+      context: ./cloud-server
+      dockerfile: ./Dockerfile
     image: cloud-server
     restart: always
     ports:
@@ -10,7 +37,11 @@ services:
         ipv4_address: 172.20.0.2
 
   naming-server:
+    build:
+      context: ./naming-server
+      dockerfile: ./Dockerfile
     image: naming-server
+    <<: *cloud-config
     depends_on:
       - cloud-server
     restart: always
@@ -30,17 +61,28 @@ services:
         ipv4_address: 172.20.0.4
 
   gateway-server:
+    build:
+      context: ./gateway-server
+      dockerfile: ./Dockerfile
     image: gateway-server
+    <<: *discovery-config
     depends_on:
       - naming-server
-    environment:
-      EUREKA.CLIENT.SERVICEURL.DEFAULTZONE: http://naming-server:8761/eureka
-      MANAGEMENT.ZIPKIN.TRACING.ENDPOINT: http://zipkin-server:9411/api/v2/spans
     ports:
       - "8765:8765"
     networks:
       loga:
         ipv4_address: 172.20.0.5
+
+  data-server:
+    image: postgres:alpine3.19
+    restart: always
+    <<: *datasource-config
+    ports:
+      - "25432:5432"
+    networks:
+      loga:
+        ipv4_address: 172.20.0.8
 
   zookeeper:
     image: confluentinc/cp-zookeeper:latest
@@ -70,18 +112,26 @@ services:
       loga:
         ipv4_address: 172.20.0.7
 
-  postgres:
-    image: postgres:alpine3.19
-    restart: always
+  authentication-service:
+    build:
+      context: ./authentication-service
+      dockerfile: ./Dockerfile
+    image: authentication-service
+    depends_on:
+      - naming-server
+      - data-server
+    <<: *discovery-config
     environment:
-      POSTGRES_USER: loga
-      POSTGRES_PASSWORD: Log@2024
-      POSTGRES_DB: loga
+      SPRING.DATASOURCE.URL: jdbc:postgresql://data-server:5432/loga
+      SPRING.DATASOURCE.USERNAME: loga
+      SPRING.DATASOURCE.PASSWORD: Log@2024
+      SPRING.JPA.HIBERNATE.DDL.AUTO: update
+
     ports:
-      - "25432:5432"
+      - "8001:8001"
     networks:
       loga:
-        ipv4_address: 172.20.0.8
+        ipv4_address: 172.20.0.10
 
 networks:
   loga:

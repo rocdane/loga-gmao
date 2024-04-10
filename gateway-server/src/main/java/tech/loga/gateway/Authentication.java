@@ -20,7 +20,7 @@ public class Authentication implements UserDetailsService {
 
         try {
             var userDetails = restTemplate
-                    .getForObject("http://AUTHENTICATION-SERVICE//session/?token="+username, AuthSession.class);
+                    .getForObject("http://AUTHENTICATION-SERVICE//session/?token="+username, AuthenticatedUser.class);
 
             assert userDetails!=null;
 

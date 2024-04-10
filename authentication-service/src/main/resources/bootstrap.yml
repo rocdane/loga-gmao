@@ -1,0 +1,5 @@
+spring:
+  cloud:
+    config:
+      name: authentication-service
+      uri: http://cloud-server:8888

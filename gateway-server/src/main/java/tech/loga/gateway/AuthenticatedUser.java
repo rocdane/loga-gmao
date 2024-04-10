@@ -17,10 +17,8 @@ import java.util.List;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class AuthSession implements Serializable, UserDetails
+public class AuthenticatedUser implements Serializable, UserDetails
 {
-    private Long id;
-
     private String host;
 
     private String token;

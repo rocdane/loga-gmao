@@ -1,5 +1,6 @@
 FROM openjdk:19
 EXPOSE 8761
-WORKDIR /opt
-COPY target/naming-server-0.0.1-SNAPSHOT.jar /opt
-ENTRYPOINT ["java","-jar","./naming-server-0.0.1-SNAPSHOT.jar"]
+COPY target/naming-server-1.0-SNAPSHOT.jar naming-server.jar
+ADD entrypoint.sh entrypoint.sh
+CMD [ "entrypoint.sh" ]
+ENTRYPOINT ["sh"]

@@ -13,8 +13,6 @@ spring:
         native:
           search-locations:
             - file:/config
-        git:
-          uri: ./config
         bootstrap: true
 
   main:
