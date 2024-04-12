@@ -1,4 +1,4 @@
-package tech.loga.gateway;
+package tech.loga.config;
 
 import javax.crypto.*;
 import javax.crypto.spec.IvParameterSpec;

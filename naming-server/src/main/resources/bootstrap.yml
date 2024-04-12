@@ -1,5 +1,0 @@
-spring:
-  cloud:
-    config:
-      name: naming-server
-      uri: http://cloud-server:8888

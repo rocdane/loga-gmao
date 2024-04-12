@@ -1,28 +1,4 @@
 version: '3.8'
-
-x-kafka-server:
-  &kafka-config
-  environment:
-    SPRING_KAFKA_BOOTSTRAP_SERVERS: http://kafka:29092
-
-x-cloud-server:
-  &cloud-config
-  environment:
-    SPRING_CLOUD_CONFIG_URI: http://cloud-server:8888
-
-x-naming-server:
-  &discovery-config
-  environment:
-    EUREKA.CLIENT.SERVICEURL.DEFAULTZONE: http://naming-server:8761/eureka
-    MANAGEMENT.ZIPKIN.TRACING.ENDPOINT: http://zipkin-server:9411/api/v2/spans
-
-x-data-server:
-  &datasource-config
-  environment:
-    POSTGRES_USER: loga
-    POSTGRES_PASSWORD: Log@2024
-    POSTGRES_DB: loga
-
 services:
   cloud-server:
     build:
@@ -35,13 +11,15 @@ services:
     networks:
       loga:
         ipv4_address: 172.20.0.2
+    container_name: cloud-server
 
   naming-server:
     build:
       context: ./naming-server
       dockerfile: ./Dockerfile
     image: naming-server
-    <<: *cloud-config
+    environment:
+      SPRING_CLOUD_CONFIG_URI: http://cloud-server:8888
     depends_on:
       - cloud-server
     restart: always
@@ -50,6 +28,7 @@ services:
     networks:
       loga:
         ipv4_address: 172.20.0.3
+    container_name: naming-server
 
   zipkin-server:
     image: openzipkin/zipkin:latest
@@ -59,13 +38,16 @@ services:
     networks:
       loga:
         ipv4_address: 172.20.0.4
+    container_name: zipkin-server
 
   gateway-server:
     build:
       context: ./gateway-server
       dockerfile: ./Dockerfile
     image: gateway-server
-    <<: *discovery-config
+    environment:
+      EUREKA.CLIENT.SERVICEURL.DEFAULTZONE: http://naming-server:8761/eureka
+      MANAGEMENT.ZIPKIN.TRACING.ENDPOINT: http://zipkin-server:9411/api/v2/spans
     depends_on:
       - naming-server
     ports:
@@ -73,16 +55,21 @@ services:
     networks:
       loga:
         ipv4_address: 172.20.0.5
+    container_name: gateway-server
 
   data-server:
     image: postgres:alpine3.19
     restart: always
-    <<: *datasource-config
+    environment:
+      POSTGRES_USER: loga
+      POSTGRES_PASSWORD: Log@2024
+      POSTGRES_DB: loga
     ports:
       - "25432:5432"
     networks:
       loga:
         ipv4_address: 172.20.0.8
+    container_name: data-server
 
   zookeeper:
     image: confluentinc/cp-zookeeper:latest
@@ -94,6 +81,7 @@ services:
     networks:
       loga:
         ipv4_address: 172.20.0.6
+    container_name: zookeeper
 
   kafka:
     image: confluentinc/cp-kafka:latest
@@ -111,6 +99,7 @@ services:
     networks:
       loga:
         ipv4_address: 172.20.0.7
+    container_name: kafka
 
   authentication-service:
     build:
@@ -120,18 +109,19 @@ services:
     depends_on:
       - naming-server
       - data-server
-    <<: *discovery-config
     environment:
       SPRING.DATASOURCE.URL: jdbc:postgresql://data-server:5432/loga
       SPRING.DATASOURCE.USERNAME: loga
       SPRING.DATASOURCE.PASSWORD: Log@2024
       SPRING.JPA.HIBERNATE.DDL.AUTO: update
-
+      EUREKA.CLIENT.SERVICEURL.DEFAULTZONE: http://naming-server:8761/eureka
+      MANAGEMENT.ZIPKIN.TRACING.ENDPOINT: http://zipkin-server:9411/api/v2/spans
     ports:
       - "8001:8001"
     networks:
       loga:
         ipv4_address: 172.20.0.10
+    container_name: authentication-service
 
 networks:
   loga:

@@ -1,4 +1,4 @@
-package tech.loga.gateway;
+package tech.loga.config;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

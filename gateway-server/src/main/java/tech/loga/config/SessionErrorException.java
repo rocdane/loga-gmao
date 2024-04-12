@@ -1,4 +1,4 @@
-package tech.loga.gateway;
+package tech.loga.config;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

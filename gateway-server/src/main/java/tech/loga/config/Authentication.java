@@ -1,4 +1,4 @@
-package tech.loga.gateway;
+package tech.loga.config;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;

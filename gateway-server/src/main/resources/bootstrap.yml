@@ -1,5 +1,0 @@
-spring:
-  cloud:
-    config:
-      name: gateway-server
-      uri: http://cloud-server:8888

@@ -8,7 +8,7 @@ do
   echo "Eureka service response: $status_code\n"
   echo "Cloud Config service response: $status_code_config"
 
-  if [ $status_code -eq 401 ] && [ $status_code_config -eq 200 ]
+  if [ $status_code -eq 200 ] && [ $status_code_config -eq 200 ]
   then
     java -jar authentication-service.jar
     break

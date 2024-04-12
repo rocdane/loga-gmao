@@ -1,4 +1,4 @@
-package tech.loga.gateway;
+package tech.loga.config;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

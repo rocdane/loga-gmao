@@ -1,5 +1,3 @@
-#!/bin/bash
-
 case $1 in
   "build")
 
@@ -16,5 +14,9 @@ case $1 in
   ;;
   "run")
     docker-compose -p "loga" up -d --force-recreate --build
+
+  ;;
+  "stop")
+    docker-compose -p "loga" down
 ;;
 esac
