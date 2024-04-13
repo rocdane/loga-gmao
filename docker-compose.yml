@@ -113,7 +113,6 @@ services:
       SPRING.DATASOURCE.URL: jdbc:postgresql://data-server:5432/loga
       SPRING.DATASOURCE.USERNAME: loga
       SPRING.DATASOURCE.PASSWORD: Log@2024
-      SPRING.JPA.HIBERNATE.DDL.AUTO: update
       EUREKA.CLIENT.SERVICEURL.DEFAULTZONE: http://naming-server:8761/eureka
       MANAGEMENT.ZIPKIN.TRACING.ENDPOINT: http://zipkin-server:9411/api/v2/spans
     ports:

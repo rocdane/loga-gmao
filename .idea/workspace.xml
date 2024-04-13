@@ -5,43 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33794903-cec8-44ae-8f25-57bd4ee27e15" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/entrypoint.sh" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/entrypoint.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/config/Security.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/config/Security.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/resources/bootstrap.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-server/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-server/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-server/config" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-server/config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-server/config/gateway-server.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-server/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-server/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-server/src/main/resources/bootstrap.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy.sh" beforeDir="false" afterPath="$PROJECT_DIR$/deploy.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/client/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/client/ClientManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/client/ClientManagement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/client/ClientNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/client/ClientNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/client/ClientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/client/ClientRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entrypoint.sh" beforeDir="false" afterPath="$PROJECT_DIR$/entrypoint.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-server/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-server/entrypoint.sh" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server/entrypoint.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-server/src/main/java/tech/loga/gateway/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server/src/main/java/tech/loga/config/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-server/src/main/java/tech/loga/gateway/AuthenticatedUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server/src/main/java/tech/loga/config/AuthenticatedUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-server/src/main/java/tech/loga/gateway/Authentication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server/src/main/java/tech/loga/config/Authentication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-server/src/main/java/tech/loga/gateway/Crypto.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server/src/main/java/tech/loga/config/Crypto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-server/src/main/java/tech/loga/gateway/Filter.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server/src/main/java/tech/loga/config/Filter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-server/src/main/java/tech/loga/gateway/JwtService.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server/src/main/java/tech/loga/config/JwtService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-server/src/main/java/tech/loga/gateway/Logger.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server/src/main/java/tech/loga/config/Logger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-server/src/main/java/tech/loga/gateway/Router.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server/src/main/java/tech/loga/config/Router.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-server/src/main/java/tech/loga/gateway/Security.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server/src/main/java/tech/loga/config/Security.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-server/src/main/java/tech/loga/gateway/SessionErrorException.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server/src/main/java/tech/loga/config/SessionErrorException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-server/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-server/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server/src/main/resources/bootstrap.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/naming-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/naming-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/naming-server/src/main/java/tech/loga/NamingServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/naming-server/src/main/java/tech/loga/NamingServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/naming-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/naming-server/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/naming-server/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/naming-server/src/main/resources/bootstrap.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,8 +25,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Record" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -103,7 +77,7 @@
     "dart.analysis.tool.window.visible": "false",
     "jdk.selected.JAVA_MODULE": "openjdk-19",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/rochdane/IdeaProjects/loga-gmao/gateway-server/src/main/resources",
+    "last_opened_file_path": "/home/rochdane/IdeaProjects/loga-cloud/customer-service",
     "onboarding.tips.debug.path": "/home/rochdane/IdeaProjects/loga-gmao/loga-cloud/src/main/java/tech/loga/Main.java",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
@@ -114,15 +88,15 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/customer-service/src/main/java/tech/loga" />
       <recent name="$PROJECT_DIR$/gateway-server/src/main/resources" />
       <recent name="$PROJECT_DIR$/authentication-service/src/main/resources" />
       <recent name="$PROJECT_DIR$/authentication-service" />
       <recent name="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/config" />
-      <recent name="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/gateway-server" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/gateway-server" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
