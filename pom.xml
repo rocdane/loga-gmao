@@ -21,5 +21,6 @@
         <module>naming-server</module>
         <module>gateway-server</module>
         <module>authentication-service</module>
+        <module>customer-service</module>
     </modules>
 </project>
