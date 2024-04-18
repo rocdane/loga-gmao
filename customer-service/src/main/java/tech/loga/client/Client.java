@@ -26,8 +26,8 @@ public class Client implements Serializable
     @Column(name = "type")
     private String type;
 
-    @Column(name = "legal_notice")
-    private String legalNotice;
+    @Column(name = "legal")
+    private String legal;
 
     @Column(name = "address")
     private String address;
@@ -35,9 +35,15 @@ public class Client implements Serializable
     @Column(name = "contact",unique = true)
     private String contact;
 
-    public Client(String name, String type, String contact){
+    public Client(String name,
+                  String type,
+                  String legal,
+                  String address,
+                  String contact){
         this.name=name;
         this.type=type;
+        this.legal=legal;
+        this.address=address;
         this.contact=contact;
     }
 }

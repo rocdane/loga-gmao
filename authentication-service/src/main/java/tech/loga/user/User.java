@@ -29,13 +29,13 @@ public class User implements Serializable, UserDetails
     private Long id;
 
     @Column(name = "username", unique = true, length = 50)
-    private String username;
+    private java.lang.String username;
 
     @Column(name = "password")
-    private String password;
+    private java.lang.String password;
 
     @Column(name = "role")
-    private String role;
+    private java.lang.String role;
 
     @Column(name = "is_active")
     private Boolean active = true;
@@ -54,12 +54,12 @@ public class User implements Serializable, UserDetails
     }
 
     @Override
-    public String getPassword() {
+    public java.lang.String getPassword() {
         return this.password;
     }
 
     @Override
-    public String getUsername() {
+    public java.lang.String getUsername() {
         return this.username;
     }
 

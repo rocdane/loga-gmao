@@ -29,12 +29,12 @@ public class AutomobileResource implements AutomobileManagement{
 
     @Override
     public Automobile getAutomobileByNumber(String number) {
-        return automobileRepository.findByNumber(number).get();
+        return automobileRepository.findByNumberIgnoreCase(number).get();
     }
 
     @Override
     public Automobile getAutomobileByVin(String vin) {
-        return automobileRepository.findByVin(vin).get();
+        return automobileRepository.findByVinIgnoreCase(vin).get();
     }
 
     @Override

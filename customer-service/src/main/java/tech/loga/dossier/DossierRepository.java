@@ -9,9 +9,9 @@ import java.util.Optional;
 @Repository
 public interface DossierRepository extends JpaRepository<Dossier,Long> {
 
-    Optional<Dossier> findByReference(String reference);
-    Optional<Dossier> findDossierByAutomobileNumber(String number);
-    List<Dossier> findAllByAutomobileNumberContaining(String number);
-    List<Dossier> findAllByClientNameContaining(String name);
+    Optional<Dossier> findByReferenceIgnoreCase(String reference);
+    Optional<Dossier> findDossierByAutomobileNumberIgnoreCase(String number);
+    List<Dossier> findAllByAutomobileNumberContainingIgnoreCase(String number);
+    List<Dossier> findAllByClientNameContainingIgnoreCase(String name);
 }
 

@@ -15,8 +15,8 @@ public class ClientResource implements ClientManagement{
     @Override
     @Transactional
     public Client createClient(Client client) {
-        if(clientRepository.findByContact(client.getContact())!=null)
-            return null;
+        if(clientRepository.findByContactIgnoreCase(client.getContact()).isPresent())
+            return clientRepository.findByContactIgnoreCase(client.getContact()).get();
         else
             return clientRepository.save(client);
     }
@@ -37,8 +37,8 @@ public class ClientResource implements ClientManagement{
     @Override
     public Client getClientByName(String name) {
         Client client = null;
-        if(clientRepository.findByName(name).isPresent())
-            client = clientRepository.findByName(name).get();
+        if(clientRepository.findByNameIgnoreCase(name).isPresent())
+            client = clientRepository.findByNameIgnoreCase(name).get();
         return client;
     }
 
@@ -52,7 +52,7 @@ public class ClientResource implements ClientManagement{
                     up.setAddress(client.getAddress());
                     up.setContact(client.getContact());
                     up.setType(client.getType());
-                    up.setLegalNotice(client.getLegalNotice());
+                    up.setLegal(client.getLegal());
                     clientRepository.saveAndFlush(up);
                 });
     }

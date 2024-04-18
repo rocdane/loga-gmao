@@ -24,8 +24,11 @@ public class Dossier implements Serializable
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "reference",unique = true, length = 100)
+    @Column(name = "reference",unique = true, length = 24)
     private String reference;
+
+    @Column(name = "is_archived")
+    private Boolean archived;
 
     @Column(name = "open_at")
     private Date openAt;
@@ -42,4 +45,10 @@ public class Dossier implements Serializable
     @OneToOne(targetEntity = Automobile.class, cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinColumn(name = "automobile", referencedColumnName = "id")
     private Automobile automobile;
+
+    public Dossier(String reference, Client client, Automobile automobile) {
+        this.reference = reference;
+        this.client = client;
+        this.automobile = automobile;
+    }
 }

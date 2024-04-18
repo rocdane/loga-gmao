@@ -1,7 +1,6 @@
 package tech.loga.user;
 
-import jakarta.servlet.http.HttpServletRequest;
-import tech.loga.auth.SessionErrorException;
+import tech.loga.auth.AuthenticationErrorException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -15,29 +14,29 @@ import java.util.List;
 public class UserController {
 
     @Autowired
-    private UserResource userResource;
+    private UserManagement userManagement;
 
     @PostMapping(path = "/registrate", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<User> register(@RequestBody UserRegisterRequest userRegisterRequest){
-        User registered = userResource.register(userRegisterRequest);
-        if (registered != null){
-            return ResponseEntity.ok(registered);
+    public ResponseEntity<String> register(@RequestBody UserRegisterRequest userRegisterRequest){
+        String token = userManagement.registerUser(userRegisterRequest);
+        if (token != null){
+            return ResponseEntity.ok("User registrate successfully");
         }else
-            throw new SessionErrorException("User registration failed");
+            throw new AuthenticationErrorException("User registration failed");
     }
 
     @GetMapping(path = "/users",produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<UserDTO>> list() {
-        return ResponseEntity.ok(userResource.allUser());
+        return ResponseEntity.ok(userManagement.getAllUser());
     }
 
     @PutMapping(path = "/update/{id}")
     public void update(@RequestBody UserUpdateRequest userUpdateRequest, @PathVariable Long id){
-        userResource.edit(userUpdateRequest,id);
+        userManagement.editUser(userUpdateRequest,id);
     }
 
     @DeleteMapping(path = "/users/{id}")
     public void delete(@PathVariable Long id){
-        userResource.delete(id);
+        userManagement.deleteUser(id);
     }
 }

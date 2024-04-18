@@ -1,41 +1,39 @@
 package tech.loga.user;
 
-import io.jsonwebtoken.lang.Assert;
-import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import tech.loga.auth.Credentials;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 class UserResourceTest {
 
     @Autowired
-    UserResource userResource;
+    private UserManagement userManagement;
 
     @Test
     void register() {
-        User user = userResource.register(new UserRegisterRequest(
-                "super",
+        String token = userManagement.registerUser(new UserRegisterRequest(
+                "admin",
                 "P@$$w0rd",
-                "SUPER"
+                "ADMIN"
         ));
-        Assert.notNull(user,"Failed to registrate user");
+        System.out.println(token);
+        Assertions.assertNotNull(token,"Failed to registrate user");
     }
 
     @Test
     void find() {
-        User user = userResource.find("super");
-        Assert.notNull(
-                user,
+        String token = userManagement.getUserByName("super");
+        System.out.println(token);
+        Assertions.assertNotNull(
+                token,
                 "Failed to find user"
         );
     }
 
     @Test
     void allUser() {
-        Assert.notEmpty(userResource.allUser());
+        Assertions.assertNotNull(userManagement.getAllUser().get(0));
     }
 }

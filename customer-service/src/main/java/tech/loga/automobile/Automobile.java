@@ -37,4 +37,18 @@ public class Automobile implements Serializable
 
     @Column(name = "unit")
     private String unit;
+
+    public Automobile(String number,
+                      String vin,
+                      String make,
+                      String model,
+                      Integer trim,
+                      String unit) {
+        this.number = number;
+        this.vin = vin;
+        this.make = make;
+        this.model = model;
+        this.trim = trim;
+        this.unit = unit;
+    }
 }

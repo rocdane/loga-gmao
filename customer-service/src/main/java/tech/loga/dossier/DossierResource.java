@@ -23,20 +23,20 @@ public class DossierResource implements DossierManagement{
     public Dossier createDossier(Dossier dossier) {
         Client client = null;
 
-        if(clientRepository.findByName(dossier.getClient().getName()).isPresent()) {
-            client = clientRepository.findByName(dossier.getClient().getName()).get();
+        if(clientRepository.findByNameIgnoreCase(dossier.getClient().getName()).isPresent()) {
+            client = clientRepository.findByNameIgnoreCase(dossier.getClient().getName()).get();
         }
 
         if (client!=null) {
             dossier.setClient(client);
         }
 
-        Boolean notExistAutomobile = dossierRepository.findDossierByAutomobileNumber(dossier.getAutomobile().getNumber()).isEmpty();
-        Boolean notExistReference = dossierRepository.findByReference(dossier.getReference()).isEmpty();
+        Boolean notExistAutomobile = dossierRepository.findDossierByAutomobileNumberIgnoreCase(dossier.getAutomobile().getNumber()).isEmpty();
+        Boolean notExistReference = dossierRepository.findByReferenceIgnoreCase(dossier.getReference()).isEmpty();
 
         if(notExistAutomobile && notExistReference){
-            dossier.setOpenAt(new Date());
-            dossier.setUpdatedAt(new Date());
+            dossier.setOpenAt(new Date(System.currentTimeMillis()));
+            dossier.setUpdatedAt(new Date(System.currentTimeMillis()));
             return dossierRepository.save(dossier);
         }else{
             return null;
@@ -50,12 +50,12 @@ public class DossierResource implements DossierManagement{
 
     @Override
     public List<Dossier> getAllDossierByClientName(String name){
-        return dossierRepository.findAllByClientNameContaining(name);
+        return dossierRepository.findAllByClientNameContainingIgnoreCase(name);
     }
 
     @Override
     public List<Dossier> getAllDossierByAutomobileNumber(String number) {
-        return dossierRepository.findAllByAutomobileNumberContaining(number);
+        return dossierRepository.findAllByAutomobileNumberContainingIgnoreCase(number);
     }
 
     @Override
@@ -65,12 +65,12 @@ public class DossierResource implements DossierManagement{
 
     @Override
     public Dossier getDossierByReference(String reference){
-        return dossierRepository.findByReference(reference).get();
+        return dossierRepository.findByReferenceIgnoreCase(reference).get();
     }
 
     @Override
     public Dossier getDossierByAutomobileNumber(String number){
-        return dossierRepository.findDossierByAutomobileNumber(number).get();
+        return dossierRepository.findDossierByAutomobileNumberIgnoreCase(number).get();
     }
 
     @Override

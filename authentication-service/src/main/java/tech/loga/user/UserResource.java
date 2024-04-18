@@ -4,27 +4,30 @@ import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import tech.loga.vendor.JwtService;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-public class UserResource {
+public class UserResource implements UserManagement{
 
     private final PasswordEncoder passwordEncoder;
     private final UserRepository userRepository;
     private final UserDTOMapper userDTOMapper;
+    private final JwtService jwtService;
 
     @Autowired
     public UserResource(PasswordEncoder passwordEncoder,
                         UserRepository userRepository,
-                        UserDTOMapper userDTOMapper) {
+                        UserDTOMapper userDTOMapper, JwtService jwtService) {
         this.passwordEncoder = passwordEncoder;
         this.userRepository = userRepository;
         this.userDTOMapper = userDTOMapper;
+        this.jwtService = jwtService;
     }
 
-    public User register(UserRegisterRequest registerRequest) {
+    public String registerUser(UserRegisterRequest registerRequest) {
 
         boolean userExist = userRepository
                 .findByUsernameIgnoreCase(registerRequest.getUsername())
@@ -38,19 +41,19 @@ public class UserResource {
         user.setUsername(registerRequest.getUsername());
         user.setPassword(passwordEncoder.encode(registerRequest.getPassword()));
         user.setRole(registerRequest.getRole());
-
-        return userRepository.save(user);
+        userRepository.save(user);
+        return jwtService.generateToken(user.getUsername());
     }
 
-    public User find(String username){
+    public String getUserByName(String username){
         if(userRepository.findByUsernameIgnoreCase(username).isPresent()){
-            return userRepository.findByUsernameIgnoreCase(username).get();
+            return jwtService.generateToken(username);
         }else {
             throw new UserNotFoundException("User does not exists");
         }
     }
 
-    public List<UserDTO> allUser(){
+    public List<UserDTO> getAllUser(){
         return userRepository
                 .findAll()
                 .stream()
@@ -59,7 +62,7 @@ public class UserResource {
     }
 
     @Transactional
-    public void edit(UserUpdateRequest updateRequest, Long id){
+    public void editUser(UserUpdateRequest updateRequest, Long id){
         userRepository
                 .findById(id)
                 .ifPresentOrElse(up -> {
@@ -73,7 +76,7 @@ public class UserResource {
                 });
     }
 
-    public void delete(Long id) {
+    public void deleteUser(Long id) {
         userRepository.findById(id).ifPresentOrElse(user -> {
             userRepository.findById(user.getId());
         },() -> {

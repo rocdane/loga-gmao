@@ -5,16 +5,86 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33794903-cec8-44ae-8f25-57bd4ee27e15" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/auth/AuthenticationManagement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/auth/AuthenticationRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/auth/AuthenticationResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer-service/entrypoint.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/customer/RegistrateCustomer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/auth/Credentials.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/auth/IPassport.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/auth/Passport.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/auth/PassportMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/auth/SessionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/auth/AuthenticationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/auth/SessionErrorException.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/auth/AuthenticationErrorException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/auth/SessionResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/config/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/vendor/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/config/Authentication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/config/Crypto.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/vendor/Crypto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/config/CustomizedResponseEntityExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/vendor/CustomizedResponseEntityExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/config/ErrorDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/vendor/ErrorDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/config/JwtAuthFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/config/JwtService.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/vendor/JwtService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/config/Logger.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/config/Security.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/vendor/Security.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/user/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/user/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/user/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/user/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/user/UserDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/user/UserDTOMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/user/UserDTOMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/user/UserNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/user/UserNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/user/UserResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/user/UserResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/user/UserUpdateRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/user/UserUpdateRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/test/java/tech/loga/auth/SessionResourceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/test/java/tech/loga/auth/AuthenticationResourceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/test/java/tech/loga/user/UserResourceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/test/java/tech/loga/user/UserResourceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-server/config" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-server/config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-server/config/gateway-server.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/api/AuthenticationService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/automobile/Automobile.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/automobile/Automobile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/automobile/AutomobileController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/automobile/AutomobileNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/automobile/AutomobileRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/automobile/AutomobileRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/automobile/AutomobileResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/automobile/AutomobileResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/client/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/client/ClientManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/client/ClientManagement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/client/ClientNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/client/ClientNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/client/ClientController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/client/ClientNotFoundException.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/client/ClientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/client/ClientRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/client/ClientResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/client/ClientResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/config/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/vendor/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/config/Authentication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/config/Crypto.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/vendor/Crypto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/config/CustomizedResponseEntityExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/vendor/CustomizedResponseEntityExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/config/ErrorDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/vendor/ErrorDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/config/JwtAuthFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/config/JwtService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/config/Logger.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/config/Security.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/customer/CustomerResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/dossier/Dossier.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/dossier/Dossier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/dossier/DossierBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/customer/CustomerBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/dossier/DossierController.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/customer/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/dossier/DossierNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/customer/CustomerNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/dossier/DossierRegistrationFailedException.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/customer/CustomerRegistrationFailedException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/dossier/DossierRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/dossier/DossierRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/dossier/DossierResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/dossier/DossierResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-server/src/main/java/tech/loga/GatewayServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server/src/main/java/tech/loga/GatewayServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-server/src/main/java/tech/loga/config/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server/src/main/java/tech/loga/vendor/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-server/src/main/java/tech/loga/config/AuthenticatedUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-server/src/main/java/tech/loga/config/Authentication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-server/src/main/java/tech/loga/config/Crypto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-server/src/main/java/tech/loga/config/Filter.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server/src/main/java/tech/loga/vendor/AuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-server/src/main/java/tech/loga/config/JwtService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-server/src/main/java/tech/loga/config/Logger.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-server/src/main/java/tech/loga/config/Router.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server/src/main/java/tech/loga/vendor/RouterValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-server/src/main/java/tech/loga/config/Security.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-server/src/main/java/tech/loga/config/SessionErrorException.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +96,8 @@
       <list>
         <option value="Record" />
         <option value="JUnit5 Test Class" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -48,51 +118,74 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.NamingServer.executor": "Run",
-    "Application.authentication-service.executor": "Run",
-    "Docker.docker-compose.yml.cloud-server: Compose Deployment.executor": "Run",
-    "Docker.docker-compose.yml.data-server: Compose Deployment.executor": "Run",
-    "Docker.docker-compose.yml.naming-server: Compose Deployment.executor": "Run",
-    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
-    "Docker.loga-gmao.executor": "Run",
-    "Docker.naming-server/Dockerfile.executor": "Run",
-    "JAR Application.naming-server-1.0-SNAPSHOT.jar.executor": "Run",
-    "JUnit.SessionResourceTest.authenticate.executor": "Run",
-    "JUnit.UserResourceTest.allUser.executor": "Run",
-    "JUnit.UserResourceTest.executor": "Run",
-    "JUnit.UserResourceTest.find.executor": "Run",
-    "JUnit.UserResourceTest.register.executor": "Run",
-    "Maven.authentication-service [clean,package...].executor": "Run",
-    "Maven.cloud-server [package,-DSkipTests].executor": "Run",
-    "Maven.gateway-server [clean,package...].executor": "Run",
-    "Maven.loga-gmao [clean,package,-DskipTests].executor": "Run",
-    "Maven.naming-server [clean,package,-DSkipTests].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "dart.analysis.tool.window.visible": "false",
-    "jdk.selected.JAVA_MODULE": "openjdk-19",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/rochdane/IdeaProjects/loga-cloud/customer-service",
-    "onboarding.tips.debug.path": "/home/rochdane/IdeaProjects/loga-gmao/loga-cloud/src/main/java/tech/loga/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.importing",
-    "show.migrate.to.gradle.popup": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.NamingServer.executor&quot;: &quot;Run&quot;,
+    &quot;Application.authentication-service.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml.cloud-server: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml.data-server: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml.naming-server: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.jenkins.jenkins: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.loga-gmao.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.naming-server/Dockerfile.executor&quot;: &quot;Run&quot;,
+    &quot;JAR Application.naming-server-1.0-SNAPSHOT.jar.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AuthenticationResourceTest.authenticate.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AuthenticationResourceTest.testAuthenticate.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AutomobileResourceTest.createAutomobile.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AutomobileResourceTest.getAllAutomobile.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AutomobileResourceTest.getAutomobileById.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AutomobileResourceTest.getAutomobileByNumber.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AutomobileResourceTest.getAutomobileByVin.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ClientResourceTest.createClient.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ClientResourceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ClientResourceTest.getAllClient.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ClientResourceTest.getClientById.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ClientResourceTest.getClientByName.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DossierResourceTest.createDossier.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DossierResourceTest.getAllDossier.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DossierResourceTest.getAllDossierByAutomobileNumber.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DossierResourceTest.getAllDossierByClientName.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DossierResourceTest.getDossierByAutomobileNumber.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DossierResourceTest.getDossierById.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DossierResourceTest.getDossierByReference.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SessionResourceTest.authenticate.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserResourceTest.allUser.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserResourceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserResourceTest.find.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserResourceTest.register.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.authentication-service [clean,package...].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.cloud-server [package,-DSkipTests].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.gateway-server [clean,package...].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.loga-gmao [clean,package,-DskipTests].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.naming-server [clean,package,-DSkipTests].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-19&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/rochdane/Documents/N2A.CC/full-stack/jenkins/docker-compose.yml&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/home/rochdane/IdeaProjects/loga-gmao/loga-cloud/src/main/java/tech/loga/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.importing&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="tech.loga.user" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/customer-service" />
+      <recent name="$PROJECT_DIR$/customer-service/src/main/resources" />
       <recent name="$PROJECT_DIR$/customer-service/src/main/java/tech/loga" />
       <recent name="$PROJECT_DIR$/gateway-server/src/main/resources" />
       <recent name="$PROJECT_DIR$/authentication-service/src/main/resources" />
-      <recent name="$PROJECT_DIR$/authentication-service" />
-      <recent name="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/config" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -103,9 +196,13 @@
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="tech.loga.auth" />
+      <recent name="tech.loga.dossier" />
+      <recent name="tech.loga.automobile" />
+      <recent name="tech.loga.client" />
       <recent name="tech.loga.user" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="tech.loga.vendor" />
       <recent name="tech.loga.user" />
       <recent name="tech.loga.gateway" />
     </key>
@@ -129,100 +226,53 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="authentication-service [clean,package...]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
-      <MavenSettings>
-        <option name="myGeneralSettings" />
-        <option name="myRunnerSettings" />
-        <option name="myRunnerParameters">
-          <MavenRunnerParameters>
-            <option name="cmdOptions" />
-            <option name="profiles">
-              <set />
-            </option>
-            <option name="goals">
-              <list>
-                <option value="clean" />
-                <option value="package" />
-                <option value="-DskipTests" />
-              </list>
-            </option>
-            <option name="multimoduleDir" />
-            <option name="pomFileName" />
-            <option name="profilesMap">
-              <map />
-            </option>
-            <option name="projectsCmdOptionValues">
-              <list />
-            </option>
-            <option name="resolveToWorkspace" value="false" />
-            <option name="workingDirPath" value="$PROJECT_DIR$/authentication-service" />
-          </MavenRunnerParameters>
-        </option>
-      </MavenSettings>
-      <method v="2" />
+    <configuration name="AuthenticationResourceTest.authenticate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="authentication-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tech.loga.auth.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tech.loga.auth" />
+      <option name="MAIN_CLASS_NAME" value="tech.loga.auth.AuthenticationResourceTest" />
+      <option name="METHOD_NAME" value="authenticate" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration name="cloud-server [package,-DSkipTests]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
-      <MavenSettings>
-        <option name="myGeneralSettings" />
-        <option name="myRunnerSettings" />
-        <option name="myRunnerParameters">
-          <MavenRunnerParameters>
-            <option name="cmdOptions" />
-            <option name="profiles">
-              <set />
-            </option>
-            <option name="goals">
-              <list>
-                <option value="package" />
-                <option value="-DSkipTests" />
-              </list>
-            </option>
-            <option name="multimoduleDir" />
-            <option name="pomFileName" />
-            <option name="profilesMap">
-              <map />
-            </option>
-            <option name="projectsCmdOptionValues">
-              <list />
-            </option>
-            <option name="resolveToWorkspace" value="false" />
-            <option name="workingDirPath" value="$PROJECT_DIR$/cloud-server" />
-          </MavenRunnerParameters>
-        </option>
-      </MavenSettings>
-      <method v="2" />
+    <configuration name="AuthenticationResourceTest.testAuthenticate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="authentication-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tech.loga.auth.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tech.loga.auth" />
+      <option name="MAIN_CLASS_NAME" value="tech.loga.auth.AuthenticationResourceTest" />
+      <option name="METHOD_NAME" value="testAuthenticate" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration name="gateway-server [clean,package...]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
-      <MavenSettings>
-        <option name="myGeneralSettings" />
-        <option name="myRunnerSettings" />
-        <option name="myRunnerParameters">
-          <MavenRunnerParameters>
-            <option name="cmdOptions" />
-            <option name="profiles">
-              <set />
-            </option>
-            <option name="goals">
-              <list>
-                <option value="clean" />
-                <option value="package" />
-                <option value="-DSkipTests" />
-              </list>
-            </option>
-            <option name="multimoduleDir" />
-            <option name="pomFileName" />
-            <option name="profilesMap">
-              <map />
-            </option>
-            <option name="projectsCmdOptionValues">
-              <list />
-            </option>
-            <option name="resolveToWorkspace" value="false" />
-            <option name="workingDirPath" value="$PROJECT_DIR$/gateway-server" />
-          </MavenRunnerParameters>
-        </option>
-      </MavenSettings>
-      <method v="2" />
+    <configuration name="UserResourceTest.allUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="authentication-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tech.loga.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tech.loga.user" />
+      <option name="MAIN_CLASS_NAME" value="tech.loga.user.UserResourceTest" />
+      <option name="METHOD_NAME" value="allUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="loga-gmao [clean,package,-DskipTests]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
       <MavenSettings>
@@ -256,38 +306,6 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
-    <configuration name="naming-server [clean,package,-DSkipTests]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
-      <MavenSettings>
-        <option name="myGeneralSettings" />
-        <option name="myRunnerSettings" />
-        <option name="myRunnerParameters">
-          <MavenRunnerParameters>
-            <option name="cmdOptions" />
-            <option name="profiles">
-              <set />
-            </option>
-            <option name="goals">
-              <list>
-                <option value="clean" />
-                <option value="package" />
-                <option value="-DSkipTests" />
-              </list>
-            </option>
-            <option name="multimoduleDir" />
-            <option name="pomFileName" />
-            <option name="profilesMap">
-              <map />
-            </option>
-            <option name="projectsCmdOptionValues">
-              <list />
-            </option>
-            <option name="resolveToWorkspace" value="false" />
-            <option name="workingDirPath" value="$PROJECT_DIR$/naming-server" />
-          </MavenRunnerParameters>
-        </option>
-      </MavenSettings>
-      <method v="2" />
-    </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
       <deployment type="docker-compose.yml">
         <settings />
@@ -300,12 +318,12 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose.yml.cloud-server: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+    <configuration name="docker-compose.yml.data-server: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
           <option name="services">
             <list>
-              <option value="cloud-server" />
+              <option value="data-server" />
             </list>
           </option>
           <option name="sourceFilePath" value="docker-compose.yml" />
@@ -313,16 +331,16 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose.yml.naming-server: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+    <configuration name="jenkins.jenkins: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
           <option name="envFilePath" value="" />
           <option name="services">
             <list>
-              <option value="naming-server" />
+              <option value="jenkins" />
             </list>
           </option>
-          <option name="sourceFilePath" value="docker-compose.yml" />
+          <option name="sourceFilePath" value="../../Documents/N2A.CC/full-stack/jenkins/docker-compose.yml" />
         </settings>
       </deployment>
       <method v="2" />
@@ -337,42 +355,26 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="naming-server/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
-      <deployment type="dockerfile">
-        <settings>
-          <option name="buildOnly" value="true" />
-          <option name="sourceFilePath" value="naming-server/Dockerfile" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Application.cloud-server" />
       <item itemvalue="Application.authentication-service" />
       <item itemvalue="Docker.loga-gmao" />
-      <item itemvalue="Docker.naming-server/Dockerfile" />
-      <item itemvalue="Docker.docker-compose.yml.cloud-server: Compose Deployment" />
-      <item itemvalue="Docker.docker-compose.yml.naming-server: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yml.data-server: Compose Deployment" />
+      <item itemvalue="Docker.jenkins.jenkins: Compose Deployment" />
+      <item itemvalue="JUnit.AuthenticationResourceTest.authenticate" />
+      <item itemvalue="JUnit.AuthenticationResourceTest.testAuthenticate" />
+      <item itemvalue="JUnit.UserResourceTest.allUser" />
       <item itemvalue="Maven.loga-gmao [clean,package,-DskipTests]" />
-      <item itemvalue="Maven.cloud-server [package,-DSkipTests]" />
-      <item itemvalue="Maven.naming-server [clean,package,-DSkipTests]" />
-      <item itemvalue="Maven.gateway-server [clean,package...]" />
-      <item itemvalue="Maven.authentication-service [clean,package...]" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.naming-server/Dockerfile" />
-        <item itemvalue="Docker.docker-compose.yml.naming-server: Compose Deployment" />
-        <item itemvalue="Docker.docker-compose.yml.cloud-server: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.data-server: Compose Deployment" />
+        <item itemvalue="Docker.jenkins.jenkins: Compose Deployment" />
+        <item itemvalue="JUnit.AuthenticationResourceTest.authenticate" />
+        <item itemvalue="JUnit.AuthenticationResourceTest.testAuthenticate" />
+        <item itemvalue="JUnit.UserResourceTest.allUser" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-19.0.2-corretto-19.0.2-4caba194b151-6ca9ab15" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
