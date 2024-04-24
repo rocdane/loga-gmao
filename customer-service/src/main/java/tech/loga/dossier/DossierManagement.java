@@ -11,5 +11,6 @@ public interface DossierManagement {
     Dossier getDossierByReference(String reference);
     Dossier getDossierByAutomobileNumber(String number);
     void editDossier(Dossier dossier, Long id);
+    void archiveDossier(Long id);
     void deleteDossier(Long id);
 }

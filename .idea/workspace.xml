@@ -5,8 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33794903-cec8-44ae-8f25-57bd4ee27e15" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/auth/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/auth/AuthenticationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/user/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/user/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-server/config" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-server/config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-server/config/gateway-server.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/automobile/AutomobileResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/automobile/AutomobileResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/customer/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/customer/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/customer/CustomerResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/customer/CustomerResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/customer/RegistrateCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/customer/RegistrateCustomer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/dossier/DossierRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/dossier/DossierRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/dossier/DossierResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/dossier/DossierResource.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -35,7 +35,7 @@ public class UserController {
         userManagement.editUser(userUpdateRequest,id);
     }
 
-    @DeleteMapping(path = "/users/{id}")
+    @DeleteMapping(path = "/users/edit/{id}")
     public void delete(@PathVariable Long id){
         userManagement.deleteUser(id);
     }

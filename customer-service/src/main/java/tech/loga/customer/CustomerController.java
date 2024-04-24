@@ -20,27 +20,41 @@ import java.util.List;
 @RequestMapping("/customer-service")
 public class CustomerController {
 
-    private final RegistrateCustomer registrateCustomer;
-    private final FetchCustomer fetchCustomer;
-    private final UpdateCustomer updateCustomer;
-    private final CustomerMapper customerMapper;
+    private final DossierManagement dossierManagement;
+    private final ClientManagement clientManagement;
+    private final AutomobileManagement automobileManagement;
     private final CustomerBuilder customerBuilder;
+    private final CustomerMapper customerMapper;
 
     @Autowired
-    public CustomerController(RegistrateCustomer registrateCustomer,
-                              FetchCustomer fetchCustomer,
-                              UpdateCustomer updateCustomer,
-                              CustomerMapper customerMapper, CustomerBuilder customerBuilder) {
-        this.registrateCustomer = registrateCustomer;
-        this.fetchCustomer = fetchCustomer;
-        this.updateCustomer = updateCustomer;
-        this.customerMapper = customerMapper;
+    public CustomerController(DossierManagement dossierManagement,
+                              ClientManagement clientManagement,
+                              AutomobileManagement automobileManagement,
+                              CustomerBuilder customerBuilder,
+                              CustomerMapper customerMapper) {
+        this.dossierManagement = dossierManagement;
+        this.clientManagement = clientManagement;
+        this.automobileManagement = automobileManagement;
         this.customerBuilder = customerBuilder;
+        this.customerMapper = customerMapper;
     }
 
     @PostMapping(path = "/customers", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Customer> createCustomer(@RequestBody Customer customer){
-        Dossier dossier = registrateCustomer.createCustomer(customerBuilder.build(customer));
+    public ResponseEntity<Customer> createCustomer(@RequestBody Customer customer) {
+        Dossier dossier = dossierManagement.createDossier(customerBuilder.build(customer));
+        if(dossier!=null){
+            return ResponseEntity
+                    .status(HttpStatus.SC_CREATED)
+                    .body(customerMapper.apply(dossier));
+        }
+        throw new CustomerRegistrationFailedException("Failed to registrate dossier");
+    }
+
+    @PostMapping(path = "/customers/client/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Customer> createCustomer(@RequestBody Automobile automobile,
+                                                   @PathVariable Long id) {
+        Client client = clientManagement.getClientById(id);
+        Dossier dossier = dossierManagement.createDossier(customerBuilder.build(client, automobile));
         if(dossier!=null){
             return ResponseEntity
                     .status(HttpStatus.SC_CREATED)
@@ -52,7 +66,7 @@ public class CustomerController {
     @GetMapping(path = "/customers", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<Customer>> getAllCustomer(){
         List<Customer> customers =
-                fetchCustomer
+                dossierManagement
                         .getAllDossier()
                         .stream()
                         .map(customerMapper)
@@ -65,7 +79,7 @@ public class CustomerController {
 
     @GetMapping(path = "/customers/clients", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<Client>> getAllClient(){
-        List<Client> clients = fetchCustomer.getAllClient();
+        List<Client> clients = clientManagement.getAllClient();
         if(clients.isEmpty()){
             throw new CustomerNotFoundException("Any customer found");
         }
@@ -75,7 +89,7 @@ public class CustomerController {
     @GetMapping(path = "/customers/name/{name}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<Customer>> getAllCustomerByName(@PathVariable String name){
         List<Customer> customers =
-                fetchCustomer
+                dossierManagement
                         .getAllDossierByClientName(name)
                         .stream()
                         .map(customerMapper)
@@ -89,7 +103,7 @@ public class CustomerController {
     @GetMapping(path = "/customer/number/search/{number}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<Customer>> getAllCustomerByNumber(@PathVariable String number){
         List<Customer> customers =
-                fetchCustomer
+                dossierManagement
                         .getAllDossierByAutomobileNumber(number)
                         .stream()
                         .map(customerMapper)
@@ -102,7 +116,7 @@ public class CustomerController {
 
     @GetMapping(path = "/customers/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Customer> getCustomer(@PathVariable Long id){
-        Dossier dossier = fetchCustomer.getDossierById(id);
+        Dossier dossier = dossierManagement.getDossierById(id);
         if(dossier!=null){
             return ResponseEntity.ok(customerMapper.apply(dossier));
         }
@@ -111,7 +125,7 @@ public class CustomerController {
 
     @GetMapping(path = "/customers/client/{number}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Customer> getCustomerByNumber(@PathVariable String number){
-        Dossier dossier = fetchCustomer.getDossierByAutomobileNumber(number);
+        Dossier dossier = dossierManagement.getDossierByAutomobileNumber(number);
         if(dossier!=null){
             return ResponseEntity.ok(customerMapper.apply(dossier));
         }
@@ -120,7 +134,7 @@ public class CustomerController {
 
     @GetMapping(path = "/customers/dossier/{reference}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Customer> getCustomerByReference(@PathVariable String reference){
-        Dossier dossier = fetchCustomer.getDossierByReference(reference);
+        Dossier dossier = dossierManagement.getDossierByReference(reference);
         if(dossier!=null){
             return ResponseEntity.ok(customerMapper.apply(dossier));
         }
@@ -130,7 +144,7 @@ public class CustomerController {
     @PutMapping(path = "/dossiers/{id}")
     public void editCustomer(@RequestBody Dossier dossier, Long id){
         try {
-            updateCustomer.editDossier(dossier, id);
+            dossierManagement.editDossier(dossier,id);
         }catch (Exception e){
             throw new CustomerRegistrationFailedException(String.format("Failed to update customer data : %s",id));
         }
@@ -139,7 +153,7 @@ public class CustomerController {
     @PutMapping(path = "/customers/clients/{id}")
     public void editClient(@RequestBody Client client, @PathVariable Long id){
         try {
-            updateCustomer.editClient(client, id);
+            clientManagement.editClient(client,id);
         }catch (Exception e){
             throw new CustomerRegistrationFailedException(String.format("Failed to update customer data : \n%s",e.getMessage()));
         }
@@ -148,7 +162,7 @@ public class CustomerController {
     @PutMapping(path = "/customers/automobiles/{id}")
     public void editAutomobile(@RequestBody Automobile automobile, @PathVariable Long id){
         try {
-            updateCustomer.editAutomobile(automobile, id);
+            automobileManagement.editAutomobile(automobile, id);
         }catch (Exception e){
             throw new CustomerRegistrationFailedException(String.format("Failed to update customer data : \n%s",e.getMessage()));
         }
@@ -157,7 +171,7 @@ public class CustomerController {
     @PutMapping(path = "/customers/archive/{id}")
     public void archiveCustomer(@PathVariable Long id){
         try {
-            updateCustomer.archiveCustomer(id);
+            dossierManagement.archiveDossier(id);
         }catch (Exception e){
             throw new CustomerNotFoundException(String.format("Failed to archive customer : \n%s",e.getMessage()));
         }
@@ -166,7 +180,7 @@ public class CustomerController {
     @DeleteMapping(path = "/customers/{id}")
     public void deleteCustomer(@PathVariable Long id){
         try {
-            updateCustomer.deleteCustomer(id);
+            dossierManagement.deleteDossier(id);
         }catch (Exception e){
             throw new CustomerNotFoundException(String.format("Failed to delete customer : \n%s",e.getMessage()));
         }

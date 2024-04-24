@@ -8,7 +8,6 @@ import java.util.Optional;
 
 @Repository
 public interface DossierRepository extends JpaRepository<Dossier,Long> {
-
     Optional<Dossier> findByReferenceIgnoreCase(String reference);
     Optional<Dossier> findDossierByAutomobileNumberIgnoreCase(String number);
     List<Dossier> findAllByAutomobileNumberContainingIgnoreCase(String number);

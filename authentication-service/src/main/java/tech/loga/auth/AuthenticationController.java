@@ -23,7 +23,7 @@ public class AuthenticationController {
     @Bulkhead(name = SERVICE, fallbackMethod = "authenticateFallback")
     @RateLimiter(name = SERVICE, fallbackMethod = "authenticateFallback")
     @CircuitBreaker(name = SERVICE, fallbackMethod = "authenticateFallback")
-    @PostMapping(path = "/signin", produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(path = "/auth/signin", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<String> authenticate(@RequestBody AuthenticationRequest authenticationRequest) {
         try {
             return ResponseEntity.ok(authenticationManagement.authenticate(authenticationRequest));
@@ -36,7 +36,7 @@ public class AuthenticationController {
     @Bulkhead(name = SERVICE, fallbackMethod = "authenticateFallback")
     @RateLimiter(name = SERVICE, fallbackMethod = "authenticateFallback")
     @CircuitBreaker(name = SERVICE, fallbackMethod = "authenticateFallback")
-    @GetMapping(path = "/validate", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(path = "/auth/validate", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<String> authenticate(@RequestParam("token") String token){
         if(authenticationManagement.authenticate(token)){
             return ResponseEntity.ok(token);

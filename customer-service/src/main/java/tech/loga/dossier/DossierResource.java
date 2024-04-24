@@ -1,6 +1,7 @@
 package tech.loga.dossier;
 
 import tech.loga.client.Client;
+import tech.loga.client.ClientManagement;
 import tech.loga.client.ClientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,16 +17,12 @@ public class DossierResource implements DossierManagement{
     private DossierRepository dossierRepository;
 
     @Autowired
-    private ClientRepository clientRepository;
+    private ClientManagement clientManagement;
 
     @Override
     @Transactional
     public Dossier createDossier(Dossier dossier) {
-        Client client = null;
-
-        if(clientRepository.findByNameIgnoreCase(dossier.getClient().getName()).isPresent()) {
-            client = clientRepository.findByNameIgnoreCase(dossier.getClient().getName()).get();
-        }
+        Client client = clientManagement.getClientByName(dossier.getClient().getName());
 
         if (client!=null) {
             dossier.setClient(client);
@@ -39,7 +36,7 @@ public class DossierResource implements DossierManagement{
             dossier.setUpdatedAt(new Date(System.currentTimeMillis()));
             return dossierRepository.save(dossier);
         }else{
-            return null;
+            throw new RuntimeException("Customer registration failed");
         }
     }
 
@@ -60,17 +57,26 @@ public class DossierResource implements DossierManagement{
 
     @Override
     public Dossier getDossierById(Long id) {
-        return dossierRepository.findById(id).isPresent() ? dossierRepository.findById(id).get() : null;
+        if(dossierRepository.findById(id).isPresent()){
+            return dossierRepository.findById(id).get();
+        }
+        throw new RuntimeException(String.format("Dossier with id : %d not exists.",id));
     }
 
     @Override
     public Dossier getDossierByReference(String reference){
-        return dossierRepository.findByReferenceIgnoreCase(reference).get();
+        if(dossierRepository.findByReferenceIgnoreCase(reference).isPresent()){
+            return dossierRepository.findByReferenceIgnoreCase(reference).get();
+        }
+        throw new RuntimeException(String.format("Dossier with reference : %s not exists.",reference));
     }
 
     @Override
     public Dossier getDossierByAutomobileNumber(String number){
-        return dossierRepository.findDossierByAutomobileNumberIgnoreCase(number).get();
+        if(dossierRepository.findDossierByAutomobileNumberIgnoreCase(number).isPresent()){
+            return dossierRepository.findDossierByAutomobileNumberIgnoreCase(number).get();
+        }
+        throw new RuntimeException(String.format("Dossier with number : %s not exists.",number));
     }
 
     @Override
@@ -78,15 +84,35 @@ public class DossierResource implements DossierManagement{
     public void editDossier(Dossier dossier, Long id){
         dossierRepository
                 .findById(id)
-                .ifPresent(up -> {
+                .ifPresentOrElse(up -> {
                     up.setReference(dossier.getReference());
                     up.setUpdatedAt(new Date());
                     dossierRepository.saveAndFlush(up);
+                },() -> {
+                    throw new RuntimeException(String.format("Fail to update dossier with id : %d.",id));
                 });
     }
 
     @Override
-    public void deleteDossier(Long dossier) {
-        dossierRepository.deleteById(dossier);
+    public void archiveDossier(Long id) {
+        dossierRepository
+                .findById(id)
+                .ifPresentOrElse(dossier -> {
+                    dossier.setArchived(true);
+                    dossierRepository.saveAndFlush(dossier);
+                }, () -> {
+                    throw new RuntimeException(String.format("Fail to archive dossier with id : %d.",id));
+                });
+    }
+
+    @Override
+    public void deleteDossier(Long id) {
+        dossierRepository
+                .findById(id)
+                .ifPresentOrElse(dossier -> {
+                    dossierRepository.delete(dossier);
+                },() -> {
+                    throw new RuntimeException(String.format("Fail to delete dossier with id:%d",id));
+                });
     }
 }
