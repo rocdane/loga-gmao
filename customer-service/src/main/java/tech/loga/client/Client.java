@@ -7,11 +7,8 @@ import java.io.Serializable;
 
 @Data
 @Entity
-@Getter
-@Setter
-@ToString
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "client")
 public class Client implements Serializable
 {

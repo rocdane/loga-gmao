@@ -15,6 +15,7 @@ public class Crypto
     private SecretKey key;
     private IvParameterSpec ivps;
     private final String algorithm = "AES/CBC/PKCS5Padding";
+
     private Crypto(int size) {
         try {
             this.key = this.generateKey(size);

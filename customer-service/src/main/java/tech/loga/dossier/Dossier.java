@@ -10,12 +10,9 @@ import java.io.Serializable;
 import java.util.Date;
 
 @Data
-@Getter
-@Setter
-@ToString
+@Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
 @Table(name = "dossier")
 public class Dossier implements Serializable
 {
@@ -24,7 +21,7 @@ public class Dossier implements Serializable
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "reference",unique = true, length = 24)
+    @Column(name = "reference", unique = true, length = 24)
     private String reference;
 
     @Column(name = "is_archived")
@@ -46,7 +43,9 @@ public class Dossier implements Serializable
     @JoinColumn(name = "automobile", referencedColumnName = "id")
     private Automobile automobile;
 
-    public Dossier(String reference, Client client, Automobile automobile) {
+    public Dossier(String reference,
+                   Client client,
+                   Automobile automobile) {
         this.reference = reference;
         this.client = client;
         this.automobile = automobile;

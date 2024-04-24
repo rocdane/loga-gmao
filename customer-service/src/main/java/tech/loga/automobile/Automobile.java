@@ -7,9 +7,6 @@ import java.io.Serializable;
 
 @Data
 @Entity
-@Getter
-@Setter
-@ToString
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "automobile")

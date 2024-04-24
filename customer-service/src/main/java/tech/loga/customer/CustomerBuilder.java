@@ -15,11 +15,11 @@ public class CustomerBuilder {
     }
     
     public Dossier build(Customer customer){
-        StringBuilder reference = new StringBuilder();
-        reference
-                .append(clean(customer.name()).substring(0,6).toUpperCase())
-                .append(clean(customer.number()).substring(0,6).toUpperCase())
-                .append(clean(customer.vin().substring(10,16).toUpperCase()));
+        StringBuilder reference =
+                new StringBuilder()
+                        .append(clean(customer.name()).substring(0,6).toUpperCase())
+                        .append(clean(customer.number()).substring(0,6).toUpperCase())
+                        .append(clean(customer.vin().substring(10,16).toUpperCase()));
 
         Dossier dossier = new Dossier();
         dossier.setReference(reference.toString());
@@ -30,11 +30,11 @@ public class CustomerBuilder {
     }
 
     public Dossier build(Client client, Automobile automobile){
-        StringBuilder reference = new StringBuilder();
-        reference
-                .append(clean(client.getName()).substring(0,6).toUpperCase())
-                .append(clean(automobile.getNumber()).substring(0,6).toUpperCase())
-                .append(clean(automobile.getVin().substring(10,16).toUpperCase()));
+        StringBuilder reference =
+                new StringBuilder()
+                        .append(clean(client.getName()).substring(0,6).toUpperCase())
+                        .append(clean(automobile.getNumber()).substring(0,6).toUpperCase())
+                        .append(clean(automobile.getVin().substring(10,16).toUpperCase()));
 
         Dossier dossier = new Dossier();
         dossier.setReference(reference.toString());

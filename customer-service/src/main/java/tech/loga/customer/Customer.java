@@ -14,4 +14,4 @@ public record Customer(
         String model,
         Integer trim,
         String unit
-) {}
+){}
