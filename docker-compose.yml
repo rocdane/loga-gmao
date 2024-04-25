@@ -92,6 +92,48 @@ services:
         ipv4_address: 172.20.0.10
     container_name: authentication-service
 
+  customer-service:
+    build:
+      context: ./customer-service
+      dockerfile: ./Dockerfile
+    image: customer-service
+    depends_on:
+      - naming-server
+      - data-server
+    environment:
+      SPRING.DATASOURCE.URL: jdbc:postgresql://data-server:5432/loga
+      SPRING.DATASOURCE.USERNAME: loga
+      SPRING.DATASOURCE.PASSWORD: Log@2024
+      EUREKA.CLIENT.SERVICEURL.DEFAULTZONE: http://naming-server:8761/eureka
+      MANAGEMENT.ZIPKIN.TRACING.ENDPOINT: http://zipkin-server:9411/api/v2/spans
+    ports:
+      - "8002:8002"
+    networks:
+      loga:
+        ipv4_address: 172.20.0.10
+    container_name: customer-service
+
+
+  maintenance-service:
+    build:
+      context: ./maintenance-service
+      dockerfile: ./Dockerfile
+    image: maintenance-service
+    depends_on:
+      - naming-server
+      - data-server
+    environment:
+      SPRING.DATASOURCE.URL: jdbc:postgresql://data-server:5432/loga
+      SPRING.DATASOURCE.USERNAME: loga
+      SPRING.DATASOURCE.PASSWORD: Log@2024
+      EUREKA.CLIENT.SERVICEURL.DEFAULTZONE: http://naming-server:8761/eureka
+      MANAGEMENT.ZIPKIN.TRACING.ENDPOINT: http://zipkin-server:9411/api/v2/spans
+    ports:
+      - "8003:8003"
+    networks:
+      loga:
+        ipv4_address: 172.20.0.10
+    container_name: maintenance-service
 networks:
   loga:
     driver: bridge

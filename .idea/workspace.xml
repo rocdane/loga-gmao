@@ -5,15 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33794903-cec8-44ae-8f25-57bd4ee27e15" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/vendor/CustomizedResponseEntityExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/vendor/ErrorDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-server/config" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-server/config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-server/config/gateway-server.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/diagnosis/DiagnosisController.java" beforeDir="false" afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/diagnosis/DiagnosisController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/reception/ReceptionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/reception/ReceptionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/repair/RepairController.java" beforeDir="false" afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/repair/RepairController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/vendor/ReferenceBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/vendor/ReferenceBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +79,9 @@
     "JUnit.ReceptionManagementTest.getAllReception.executor": "Run",
     "JUnit.ReceptionManagementTest.getReceptionById.executor": "Run",
     "JUnit.RepairManagementTest.createRepair.executor": "Run",
+    "JUnit.RepairManagementTest.getAllRepair.executor": "Run",
+    "JUnit.RepairManagementTest.getRepairById.executor": "Run",
+    "JUnit.RepairManagementTest.orderRepair.executor": "Run",
     "JUnit.SessionResourceTest.authenticate.executor": "Run",
     "JUnit.UserResourceTest.allUser.executor": "Run",
     "JUnit.UserResourceTest.executor": "Run",
@@ -103,7 +100,7 @@
     "dart.analysis.tool.window.visible": "false",
     "jdk.selected.JAVA_MODULE": "openjdk-19",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/rochdane/IdeaProjects/loga-gmao/maintenance-service/src/main/java/tech/loga/vendor",
+    "last_opened_file_path": "/home/rochdane/IdeaProjects/loga-gmao/maintenance-service",
     "onboarding.tips.debug.path": "/home/rochdane/IdeaProjects/loga-gmao/loga-cloud/src/main/java/tech/loga/Main.java",
     "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
@@ -119,11 +116,11 @@
       <recent name="tech.loga.user" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/maintenance-service" />
       <recent name="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/vendor" />
       <recent name="$PROJECT_DIR$/maintenance-service/src/main/resources" />
       <recent name="$PROJECT_DIR$/customer-service" />
       <recent name="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga" />
-      <recent name="$PROJECT_DIR$/customer-service/src/main/resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/customer-service/src/main/resources" />
