@@ -27,9 +27,4 @@ public class Task implements Serializable
 
     @Column(name = "duration")
     private Integer duration;
-
-    public Task(String description, Integer cost) {
-        this.description = description;
-        this.cost = cost;
-    }
 }

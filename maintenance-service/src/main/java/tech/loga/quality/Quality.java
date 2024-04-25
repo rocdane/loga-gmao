@@ -37,10 +37,22 @@ public class Quality implements Serializable
     @Column(name = "mileage")
     private Integer mileage;
 
-    @Column(name = "comment")
-    private String comment;
+    @Column(name = "description")
+    private String description;
 
     @OneToMany(targetEntity = Control.class, cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
     @JoinColumn(name = "quality", referencedColumnName = "id")
     private List<Control> controls = new ArrayList<>();
+
+    public Quality(String customer,
+                   String employee,
+                   Integer mileage,
+                   String description,
+                   List<Control> controls) {
+        this.customer = customer;
+        this.employee = employee;
+        this.mileage = mileage;
+        this.description = description;
+        this.controls = controls;
+    }
 }

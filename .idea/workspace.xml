@@ -5,49 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33794903-cec8-44ae-8f25-57bd4ee27e15" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/maintenance-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/MaintenanceService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/diagnosis/Diagnosis.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/diagnosis/DiagnosisController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/diagnosis/DiagnosisManagement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/diagnosis/DiagnosisRegistrationFailedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/diagnosis/DiagnosisRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/diagnosis/DiagnosisResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/diagnosis/Factor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/diagnosis/FactorRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/quality/Control.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/quality/ControlRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/quality/Quality.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/quality/QualityManagement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/quality/QualityRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/quality/QualityResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/reception/Notice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/reception/NoticeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/reception/Reception.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/reception/ReceptionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/reception/ReceptionManagement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/reception/ReceptionRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/reception/ReceptionResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/repair/Repair.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/repair/RepairController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/repair/RepairManagement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/repair/RepairRegistrationFailedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/repair/RepairRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/repair/RepairResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/repair/Spare.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/repair/SpareRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/repair/Task.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/repair/TaskRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/user/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/user/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-server/config" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-server/config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-server/config/gateway-server.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/automobile/Automobile.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/automobile/Automobile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/client/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/customer/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/customer/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-service/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/diagnosis/Diagnosis.java" beforeDir="false" afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/diagnosis/Diagnosis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/diagnosis/DiagnosisController.java" beforeDir="false" afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/diagnosis/DiagnosisController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/quality/Quality.java" beforeDir="false" afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/quality/Quality.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/reception/Reception.java" beforeDir="false" afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/reception/Reception.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/reception/ReceptionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/reception/ReceptionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/repair/Repair.java" beforeDir="false" afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/repair/Repair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/repair/RepairController.java" beforeDir="false" afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/repair/RepairController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,9 +24,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Record" />
         <option value="JUnit5 Test Class" />
         <option value="Interface" />
+        <option value="Record" />
         <option value="Class" />
       </list>
     </option>
@@ -141,6 +108,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="tech.loga.quality" />
+      <recent name="tech.loga.reception" />
       <recent name="tech.loga.user" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -166,9 +135,11 @@
       <recent name="tech.loga.user" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="tech.loga.repair" />
+      <recent name="tech.loga.reception" />
+      <recent name="tech.loga.quality" />
       <recent name="tech.loga.vendor" />
       <recent name="tech.loga.user" />
-      <recent name="tech.loga.gateway" />
     </key>
   </component>
   <component name="RunManager" selected="Application.authentication-service">

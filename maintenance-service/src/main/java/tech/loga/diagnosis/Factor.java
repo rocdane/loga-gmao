@@ -7,9 +7,6 @@ import java.io.Serializable;
 
 @Data
 @Entity
-@Getter
-@Setter
-@ToString
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "factor")
@@ -28,10 +25,4 @@ public class Factor implements Serializable {
 
     @Column(name = "maintenance")
     private String maintenance;
-
-    public Factor(String entity, String dysfunction, String maintenance){
-        this.entity=entity;
-        this.dysfunction=dysfunction;
-        this.maintenance=maintenance;
-    }
 }

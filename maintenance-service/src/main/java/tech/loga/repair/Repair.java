@@ -34,11 +34,11 @@ public class Repair implements Serializable
     @Column(name = "reference", length = 24, unique = true)
     private String reference;
 
-    @Column(name = "description")
-    private String description;
-
     @Column(name = "mileage")
     private Integer mileage;
+
+    @Column(name = "description")
+    private String description;
 
     @Column(name = "is_approved")
     private Boolean approved;
@@ -50,4 +50,18 @@ public class Repair implements Serializable
     @OneToMany(targetEntity = Spare.class, cascade=CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
     @JoinColumn(name = "repair", referencedColumnName = "id")
     private List<Spare> spares = new ArrayList<>();
+
+    public Repair(String customer,
+                  String employee,
+                  Integer mileage,
+                  String description,
+                  List<Task> tasks,
+                  List<Spare> spares) {
+        this.customer = customer;
+        this.employee = employee;
+        this.mileage = mileage;
+        this.description = description;
+        this.tasks = tasks;
+        this.spares = spares;
+    }
 }

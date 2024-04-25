@@ -3,6 +3,7 @@ package tech.loga.repair;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -18,28 +19,36 @@ public class RepairController {
     //private ReportService reportService;
 
     @PostMapping(path = "/repairs", produces = MediaType.APPLICATION_JSON_VALUE)
-    public Repair create(@RequestBody Repair repair){
-        Repair created = repairReparation.createRepair(repair);
-        if(created != null){
-            return created;
+    public ResponseEntity<Repair> create(@RequestBody RepairRequest request){
+        Repair repair =
+                repairReparation.createRepair(new Repair(
+                        request.employee(),
+                        request.customer(),
+                        request.mileage(),
+                        request.description(),
+                        request.tasks(),
+                        request.spares()
+                ));
+        if(repair != null){
+            return ResponseEntity.ok(repair);
         }else{
-            throw new RepairRegistrationFailedException("Failed to registrate repair.");
+            throw new RepairRegistrationFailedException("Repair registration failed.");
         }
     }
 
     @GetMapping(path = "/repairs/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public Repair read(@PathVariable Long id){
-        return repairReparation.getRepairById(id);
+    public ResponseEntity<Repair> read(@PathVariable Long id){
+        return ResponseEntity.ok(repairReparation.getRepairById(id));
     }
 
     @GetMapping(path = "/repairs/reference/{reference}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public Repair read(@PathVariable("reference") String reference){
-        return repairReparation.getRepairByReference(reference);
+    public ResponseEntity<Repair> read(@PathVariable("reference") String reference){
+        return ResponseEntity.ok(repairReparation.getRepairByReference(reference));
     }
 
     @GetMapping(path = "/repairs", produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<Repair> read(){
-        return repairReparation.getAllRepair();
+    public ResponseEntity<List<Repair>> read(){
+        return ResponseEntity.ok(repairReparation.getAllRepair());
     }
 
     @PutMapping(path = "/repairs/{id}")
@@ -77,7 +86,7 @@ public class RepairController {
         repairReparation.deleteSpare(id);
     }
 
-    @GetMapping(path = "/report/repair/{id}", produces = MediaType.APPLICATION_PDF_VALUE)
+    @GetMapping(path = "/repairs/report/{id}", produces = MediaType.APPLICATION_PDF_VALUE)
     public void report(HttpServletResponse response, @PathVariable Long id) {
         //reportService.produceReportById(response,"repair",id);
     }

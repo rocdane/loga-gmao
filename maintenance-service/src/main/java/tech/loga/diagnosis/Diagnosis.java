@@ -44,4 +44,16 @@ public class Diagnosis implements Serializable{
     @OneToMany(targetEntity = Factor.class, cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
     @JoinColumn(name = "diagnosis", referencedColumnName = "id")
     private List<Factor> factors = new ArrayList<>();
+
+    public Diagnosis(String customer,
+                     String employee,
+                     Integer mileage,
+                     String description,
+                     List<Factor> factors) {
+        this.customer = customer;
+        this.employee = employee;
+        this.mileage = mileage;
+        this.description = description;
+        this.factors = factors;
+    }
 }

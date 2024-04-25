@@ -14,26 +14,38 @@ import java.util.List;
 public class ReceptionController {
 
     @Autowired
-    private ReceptionManagement repairReception;
+    private ReceptionManagement receptionManagement;
 
     //private ReportService reportService;
 
     @PostMapping(path = "/receptions", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Reception> create(@RequestBody Reception reception){
-        return ResponseEntity.ok(repairReception.createReception(reception));
+    public ResponseEntity<Reception> create(@RequestBody ReceptionRequest request){
+        Reception reception = receptionManagement.createReception(new Reception(
+                        request.customer(),
+                        request.employee(),
+                        request.mileage(),
+                        request.description(),
+                        request.notices()
+        ));
+        if(reception!=null){
+            return ResponseEntity.ok(reception);
+        }else{
+            throw new ReceptionRegistrationFailedException("Reception registration failed");
+        }
+
     }
 
     @GetMapping(path = "/receptions", produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<Reception> read() {
-        return repairReception.getAllReception();
+    public ResponseEntity<List<Reception>> read() {
+        return ResponseEntity.ok(receptionManagement.getAllReception());
     }
 
     @GetMapping(path = "/receptions/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public Reception read(@PathVariable Long id){
-        return repairReception.getReceptionById(id);
+    public ResponseEntity<Reception> read(@PathVariable Long id){
+        return ResponseEntity.ok(receptionManagement.getReceptionById(id));
     }
 
-    @GetMapping(path = "/report/reception/{id}", produces = MediaType.APPLICATION_PDF_VALUE)
+    @GetMapping(path = "/receptions/report/{id}", produces = MediaType.APPLICATION_PDF_VALUE)
     public void report(HttpServletResponse response, @PathVariable Long id) {
         //reportService.produceReportById(response,"reception",id);
     }

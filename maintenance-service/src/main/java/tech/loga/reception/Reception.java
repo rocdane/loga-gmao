@@ -43,4 +43,16 @@ public class Reception implements Serializable
     @OneToMany(targetEntity = Notice.class, cascade=CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
     @JoinColumn(name = "reception", referencedColumnName = "id")
     private List<Notice> notices = new ArrayList<>();
+
+    public Reception(String customer,
+                     String employee,
+                     Integer mileage,
+                     String description,
+                     List<Notice> notices) {
+        this.customer = customer;
+        this.employee = employee;
+        this.mileage = mileage;
+        this.description = description;
+        this.notices = notices;
+    }
 }

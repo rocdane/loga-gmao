@@ -3,11 +3,13 @@ package tech.loga.quality;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 
 @Data
 @Entity
+@NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "control")
 public class Control implements Serializable
@@ -25,4 +27,6 @@ public class Control implements Serializable
 
     @Column(name = "status")
     private String status;
+
+
 }
