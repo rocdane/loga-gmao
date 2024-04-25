@@ -2,11 +2,9 @@ package tech.loga.diagnosis;
 
 import java.util.List;
 
-public interface IDiagnosisService {
-
-    Diagnosis create(Diagnosis diagnosis);
-
-    Diagnosis read(Long id);
-
-    List<Diagnosis> readAll();
+public interface DiagnosisManagement {
+    Diagnosis createDiagnosis(Diagnosis diagnosis);
+    Diagnosis getDiagnosisById(Long id);
+    Diagnosis getDiagnosisByReference(String reference);
+    List<Diagnosis> getAllDiagnosis();
 }

@@ -1,5 +1,10 @@
 package tech.loga.repair;
 
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
@@ -7,11 +12,8 @@ import java.util.List;
 
 @Data
 @Entity
-@Getter
-@Setter
-@ToString
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "repair")
 public class Repair implements Serializable
 {
@@ -20,16 +22,16 @@ public class Repair implements Serializable
     @Column(name = "id")
     private Long id;
 
-    @Column(name="dossier", nullable = false)
-    private String dossier;
+    @Column(name = "customer", nullable = false)
+    private String customer;
 
-    @Column(name="profile")
-    private String profile;
+    @Column(name = "employee")
+    private String employee;
 
     @Column(name = "created_at")
     private Date createdAt;
 
-    @Column(name = "reference", length = 50, unique = true)
+    @Column(name = "reference", length = 24, unique = true)
     private String reference;
 
     @Column(name = "description")

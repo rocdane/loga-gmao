@@ -1,22 +1,21 @@
 package tech.loga.repair;
 
 import jakarta.servlet.http.HttpServletResponse;
-import org.loga.maintenance.api.ReportService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin(origins = "*")
 @RestController
+@CrossOrigin(origins = "*")
 @RequestMapping("/maintenance-service")
 public class RepairController {
 
     @Autowired
-    private IRepairService repairReparation;
+    private RepairManagement repairReparation;
 
-    @Autowired
-    private ReportService reportService;
+    //private ReportService reportService;
 
     @PostMapping(path = "/repairs", produces = MediaType.APPLICATION_JSON_VALUE)
     public Repair create(@RequestBody Repair repair){
@@ -30,17 +29,17 @@ public class RepairController {
 
     @GetMapping(path = "/repairs/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     public Repair read(@PathVariable Long id){
-        return repairReparation.findRepair(id);
+        return repairReparation.getRepairById(id);
     }
 
     @GetMapping(path = "/repairs/reference/{reference}", produces = MediaType.APPLICATION_JSON_VALUE)
     public Repair read(@PathVariable("reference") String reference){
-        return repairReparation.findRepair(reference);
+        return repairReparation.getRepairByReference(reference);
     }
 
     @GetMapping(path = "/repairs", produces = MediaType.APPLICATION_JSON_VALUE)
     public List<Repair> read(){
-        return repairReparation.listRepair();
+        return repairReparation.getAllRepair();
     }
 
     @PutMapping(path = "/repairs/{id}")
@@ -80,6 +79,6 @@ public class RepairController {
 
     @GetMapping(path = "/report/repair/{id}", produces = MediaType.APPLICATION_PDF_VALUE)
     public void report(HttpServletResponse response, @PathVariable Long id) {
-        reportService.produceReportById(response,"repair",id);
+        //reportService.produceReportById(response,"repair",id);
     }
 }

@@ -1,5 +1,8 @@
 package tech.loga.diagnosis;
 
+import jakarta.persistence.*;
+import lombok.*;
+
 import java.io.Serializable;
 
 @Data

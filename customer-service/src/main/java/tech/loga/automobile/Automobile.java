@@ -17,10 +17,10 @@ public class Automobile implements Serializable
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "number",unique = true)
+    @Column(name = "number", unique = true)
     private String number;
 
-    @Column(name = "vin",length = 17,unique = true)
+    @Column(name = "vin", length = 17, unique = true)
     private String vin;
 
     @Column(name = "make")

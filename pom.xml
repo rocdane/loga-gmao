@@ -22,5 +22,6 @@
         <module>gateway-server</module>
         <module>authentication-service</module>
         <module>customer-service</module>
+        <module>maintenance-service</module>
     </modules>
 </project>

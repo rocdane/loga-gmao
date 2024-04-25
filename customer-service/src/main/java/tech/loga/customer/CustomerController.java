@@ -1,7 +1,10 @@
 package tech.loga.customer;
 
+import io.github.resilience4j.bulkhead.annotation.Bulkhead;
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+import io.github.resilience4j.ratelimiter.annotation.RateLimiter;
+import io.github.resilience4j.retry.annotation.Retry;
 import org.apache.http.HttpStatus;
-import org.apache.http.protocol.HTTP;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -20,6 +23,7 @@ import java.util.List;
 @RequestMapping("/customer-service")
 public class CustomerController {
 
+    private static final String SERVICE = "customer-service";
     private final DossierManagement dossierManagement;
     private final ClientManagement clientManagement;
     private final AutomobileManagement automobileManagement;
@@ -114,6 +118,10 @@ public class CustomerController {
         return ResponseEntity.ok(customers);
     }
 
+    @Retry(name = SERVICE, fallbackMethod = "customerFallback")
+    @Bulkhead(name = SERVICE, fallbackMethod = "customerFallback")
+    @RateLimiter(name = SERVICE, fallbackMethod = "customerFallback")
+    @CircuitBreaker(name = SERVICE, fallbackMethod = "customerFallback")
     @GetMapping(path = "/customers/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Customer> getCustomer(@PathVariable Long id){
         Dossier dossier = dossierManagement.getDossierById(id);
@@ -123,6 +131,10 @@ public class CustomerController {
         throw new CustomerNotFoundException(String.format("Any customer found with id : %d",id));
     }
 
+    @Retry(name = SERVICE, fallbackMethod = "customerFallback")
+    @Bulkhead(name = SERVICE, fallbackMethod = "customerFallback")
+    @RateLimiter(name = SERVICE, fallbackMethod = "customerFallback")
+    @CircuitBreaker(name = SERVICE, fallbackMethod = "customerFallback")
     @GetMapping(path = "/customers/client/{number}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Customer> getCustomerByNumber(@PathVariable String number){
         Dossier dossier = dossierManagement.getDossierByAutomobileNumber(number);
@@ -132,6 +144,10 @@ public class CustomerController {
         throw new CustomerNotFoundException(String.format("Any Customer found with number : %s",number));
     }
 
+    @Retry(name = SERVICE, fallbackMethod = "customerFallback")
+    @Bulkhead(name = SERVICE, fallbackMethod = "customerFallback")
+    @RateLimiter(name = SERVICE, fallbackMethod = "customerFallback")
+    @CircuitBreaker(name = SERVICE, fallbackMethod = "customerFallback")
     @GetMapping(path = "/customers/dossier/{reference}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Customer> getCustomerByReference(@PathVariable String reference){
         Dossier dossier = dossierManagement.getDossierByReference(reference);
@@ -184,5 +200,9 @@ public class CustomerController {
         }catch (Exception e){
             throw new CustomerNotFoundException(String.format("Failed to delete customer : \n%s",e.getMessage()));
         }
+    }
+
+    public String customerFallback(Exception e){
+        return String.format("Failed to get customer resource : \n%s",e.getMessage());
     }
 }

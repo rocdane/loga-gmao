@@ -29,7 +29,7 @@ public class Client implements Serializable
     @Column(name = "address")
     private String address;
 
-    @Column(name = "contact",unique = true)
+    @Column(name = "contact", unique = true)
     private String contact;
 
     public Client(String name,

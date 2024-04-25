@@ -5,17 +5,49 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33794903-cec8-44ae-8f25-57bd4ee27e15" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/maintenance-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/MaintenanceService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/diagnosis/Diagnosis.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/diagnosis/DiagnosisController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/diagnosis/DiagnosisManagement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/diagnosis/DiagnosisRegistrationFailedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/diagnosis/DiagnosisRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/diagnosis/DiagnosisResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/diagnosis/Factor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/diagnosis/FactorRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/quality/Control.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/quality/ControlRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/quality/Quality.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/quality/QualityManagement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/quality/QualityRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/quality/QualityResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/reception/Notice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/reception/NoticeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/reception/Reception.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/reception/ReceptionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/reception/ReceptionManagement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/reception/ReceptionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/reception/ReceptionResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/repair/Repair.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/repair/RepairController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/repair/RepairManagement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/repair/RepairRegistrationFailedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/repair/RepairRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/repair/RepairResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/repair/Spare.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/repair/SpareRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/repair/Task.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/repair/TaskRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/auth/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/auth/AuthenticationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/user/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/user/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-server/config" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-server/config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-server/config/gateway-server.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/automobile/AutomobileResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/automobile/AutomobileResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/automobile/Automobile.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/automobile/Automobile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/client/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/customer/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/customer/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/customer/CustomerResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/customer/CustomerResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/customer/RegistrateCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/customer/RegistrateCustomer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/dossier/DossierRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/dossier/DossierRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/dossier/DossierResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/java/tech/loga/dossier/DossierResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-service/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,76 +81,77 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.NamingServer.executor&quot;: &quot;Run&quot;,
-    &quot;Application.authentication-service.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.yml.cloud-server: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.yml.data-server: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.yml.naming-server: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.jenkins.jenkins: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.loga-gmao.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.naming-server/Dockerfile.executor&quot;: &quot;Run&quot;,
-    &quot;JAR Application.naming-server-1.0-SNAPSHOT.jar.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AuthenticationResourceTest.authenticate.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AuthenticationResourceTest.testAuthenticate.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AutomobileResourceTest.createAutomobile.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AutomobileResourceTest.getAllAutomobile.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AutomobileResourceTest.getAutomobileById.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AutomobileResourceTest.getAutomobileByNumber.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AutomobileResourceTest.getAutomobileByVin.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ClientResourceTest.createClient.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ClientResourceTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ClientResourceTest.getAllClient.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ClientResourceTest.getClientById.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ClientResourceTest.getClientByName.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.DossierResourceTest.createDossier.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.DossierResourceTest.getAllDossier.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.DossierResourceTest.getAllDossierByAutomobileNumber.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.DossierResourceTest.getAllDossierByClientName.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.DossierResourceTest.getDossierByAutomobileNumber.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.DossierResourceTest.getDossierById.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.DossierResourceTest.getDossierByReference.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.SessionResourceTest.authenticate.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserResourceTest.allUser.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserResourceTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserResourceTest.find.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserResourceTest.register.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.authentication-service [clean,package...].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.cloud-server [package,-DSkipTests].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.gateway-server [clean,package...].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.loga-gmao [clean,package,-DskipTests].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.naming-server [clean,package,-DSkipTests].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-19&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/rochdane/Documents/N2A.CC/full-stack/jenkins/docker-compose.yml&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;/home/rochdane/IdeaProjects/loga-gmao/loga-cloud/src/main/java/tech/loga/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
-    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.NamingServer.executor": "Run",
+    "Application.authentication-service.executor": "Run",
+    "Docker.docker-compose.yml.cloud-server: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml.data-server: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml.naming-server: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
+    "Docker.jenkins.jenkins: Compose Deployment.executor": "Run",
+    "Docker.loga-gmao.executor": "Run",
+    "Docker.naming-server/Dockerfile.executor": "Run",
+    "JAR Application.naming-server-1.0-SNAPSHOT.jar.executor": "Run",
+    "JUnit.AuthenticationResourceTest.authenticate.executor": "Run",
+    "JUnit.AuthenticationResourceTest.testAuthenticate.executor": "Run",
+    "JUnit.AutomobileResourceTest.createAutomobile.executor": "Run",
+    "JUnit.AutomobileResourceTest.getAllAutomobile.executor": "Run",
+    "JUnit.AutomobileResourceTest.getAutomobileById.executor": "Run",
+    "JUnit.AutomobileResourceTest.getAutomobileByNumber.executor": "Run",
+    "JUnit.AutomobileResourceTest.getAutomobileByVin.executor": "Run",
+    "JUnit.ClientResourceTest.createClient.executor": "Run",
+    "JUnit.ClientResourceTest.executor": "Run",
+    "JUnit.ClientResourceTest.getAllClient.executor": "Run",
+    "JUnit.ClientResourceTest.getClientById.executor": "Run",
+    "JUnit.ClientResourceTest.getClientByName.executor": "Run",
+    "JUnit.DossierResourceTest.createDossier.executor": "Run",
+    "JUnit.DossierResourceTest.getAllDossier.executor": "Run",
+    "JUnit.DossierResourceTest.getAllDossierByAutomobileNumber.executor": "Run",
+    "JUnit.DossierResourceTest.getAllDossierByClientName.executor": "Run",
+    "JUnit.DossierResourceTest.getDossierByAutomobileNumber.executor": "Run",
+    "JUnit.DossierResourceTest.getDossierById.executor": "Run",
+    "JUnit.DossierResourceTest.getDossierByReference.executor": "Run",
+    "JUnit.SessionResourceTest.authenticate.executor": "Run",
+    "JUnit.UserResourceTest.allUser.executor": "Run",
+    "JUnit.UserResourceTest.executor": "Run",
+    "JUnit.UserResourceTest.find.executor": "Run",
+    "JUnit.UserResourceTest.register.executor": "Run",
+    "Maven.authentication-service [clean,package...].executor": "Run",
+    "Maven.cloud-server [package,-DSkipTests].executor": "Run",
+    "Maven.gateway-server [clean,package...].executor": "Run",
+    "Maven.loga-gmao [clean,package,-DskipTests].executor": "Run",
+    "Maven.naming-server [clean,package,-DSkipTests].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "dart.analysis.tool.window.visible": "false",
+    "jdk.selected.JAVA_MODULE": "openjdk-19",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/rochdane/IdeaProjects/loga-gmao/maintenance-service/src/main/resources",
+    "onboarding.tips.debug.path": "/home/rochdane/IdeaProjects/loga-gmao/loga-cloud/src/main/java/tech/loga/Main.java",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "show.migrate.to.gradle.popup": "false"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="tech.loga.user" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/maintenance-service/src/main/resources" />
       <recent name="$PROJECT_DIR$/customer-service" />
+      <recent name="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga" />
       <recent name="$PROJECT_DIR$/customer-service/src/main/resources" />
       <recent name="$PROJECT_DIR$/customer-service/src/main/java/tech/loga" />
-      <recent name="$PROJECT_DIR$/gateway-server/src/main/resources" />
-      <recent name="$PROJECT_DIR$/authentication-service/src/main/resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/customer-service/src/main/resources" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/gateway-server" />
     </key>

@@ -5,10 +5,10 @@ import java.util.List;
 
 public interface RepairManagement {
     Repair createRepair(Repair repair);
-    List<Repair> listRepair();
-    List<Repair> listRepair(Date debut, Date fin);
-    Repair findRepair(String reference);
-    Repair findRepair(Long repair);
+    List<Repair> getAllRepair();
+    List<Repair> getAllRepairByPeriod(Date debut, Date fin);
+    Repair getRepairByReference(String reference);
+    Repair getRepairById(Long id);
     void editRepair(Repair repair, Long id);
     void orderRepair(Long id);
     void editTask(Task task, Long id);

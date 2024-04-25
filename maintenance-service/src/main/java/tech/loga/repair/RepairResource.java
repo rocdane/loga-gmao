@@ -3,20 +3,26 @@ package tech.loga.repair;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import tech.loga.vendor.ReferenceBuilder;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
 @Service
-public class RepairManagement implements RepairManagement {
+public class RepairResource implements RepairManagement {
 
+    private final ReferenceBuilder referenceBuilder;
     private final RepairRepository repairRepository;
     private final TaskRepository taskRepository;
     private final SpareRepository spareRepository;
 
     @Autowired
-    public RepairService(RepairRepository repairRepository, TaskRepository taskRepository, SpareRepository spareRepository){
+    public RepairResource(ReferenceBuilder referenceBuilder,
+                          RepairRepository repairRepository,
+                          TaskRepository taskRepository,
+                          SpareRepository spareRepository){
+        this.referenceBuilder = referenceBuilder;
         this.repairRepository = repairRepository;
         this.taskRepository = taskRepository;
         this.spareRepository = spareRepository;
@@ -27,28 +33,36 @@ public class RepairManagement implements RepairManagement {
     public Repair createRepair(Repair repair) {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         repair.setCreatedAt(new Date());
-        repair.setReference(sdf.format(repair.getCreatedAt())+" - "+repair.getDossier());
+        repair.setReference(referenceBuilder.build(repair.getCustomer()));
         return repairRepository.save(repair);
     }
 
     @Override
-    public List<Repair> listRepair() {
+    public List<Repair> getAllRepair() {
         return repairRepository.findAll();
     }
 
     @Override
-    public List<Repair> listRepair(Date debut, Date fin) {
+    public List<Repair> getAllRepairByPeriod(Date debut, Date fin) {
         return repairRepository.findAllByCreatedAtBetween(debut,fin);
     }
 
     @Override
-    public Repair findRepair(String reference) {
-        return repairRepository.findByReference(reference);
+    public Repair getRepairByReference(String reference) {
+        if(repairRepository.findByReferenceIgnoreCase(reference).isPresent()){
+            return repairRepository.findByReferenceIgnoreCase(reference).get();
+        }else {
+            throw new RuntimeException(String.format("Repair with reference: %s not found",reference));
+        }
     }
 
     @Override
-    public Repair findRepair(Long id) {
-        return repairRepository.findById(id).get();
+    public Repair getRepairById(Long id) {
+        if(repairRepository.findById(id).isPresent()){
+            return repairRepository.findById(id).get();
+        }else{
+            throw new RuntimeException(String.format("Repair with id : %s not found",id));
+        }
     }
 
     @Override

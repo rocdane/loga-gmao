@@ -1,12 +1,13 @@
 package tech.loga.quality;
 
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
 import java.io.Serializable;
 
 @Data
 @Entity
-@Getter
-@Setter
-@ToString
 @AllArgsConstructor
 @Table(name = "control")
 public class Control implements Serializable
