@@ -8,8 +8,6 @@ import java.util.Date;
 @Component
 public class ReferenceBuilder {
 
-    private final SimpleDateFormat SDF = new SimpleDateFormat("yyyy-MM-dd");
-
     public String clean(String text){
         return text.replaceAll("\\s", "");
     }
@@ -17,8 +15,8 @@ public class ReferenceBuilder {
     public String build(String customer){
         StringBuilder reference =
                 new StringBuilder()
-                        .append(clean(customer).substring(0,15).toUpperCase())
-                        .append(SDF.format(new Date(System.currentTimeMillis())));
+                        .append(clean(customer).substring(0,13).toUpperCase())
+                        .append(clean(new SimpleDateFormat("yyyy-MM-dd").format(new Date(System.currentTimeMillis()))));
         return reference.toString();
     }
 }

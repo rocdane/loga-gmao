@@ -38,17 +38,29 @@ public class RepairController {
 
     @GetMapping(path = "/repairs/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Repair> read(@PathVariable Long id){
-        return ResponseEntity.ok(repairReparation.getRepairById(id));
+        Repair repair = repairReparation.getRepairById(id);
+        if(repair!=null){
+            return ResponseEntity.ok(repairReparation.getRepairById(id));
+        }
+        throw new RepairNotFoundException(String.format("Repair with id : %d not found",id));
     }
 
     @GetMapping(path = "/repairs/reference/{reference}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Repair> read(@PathVariable("reference") String reference){
-        return ResponseEntity.ok(repairReparation.getRepairByReference(reference));
+        Repair repair = repairReparation.getRepairByReference(reference);
+        if(repair!=null){
+            return ResponseEntity.ok(repairReparation.getRepairByReference(reference));
+        }
+        throw new RepairNotFoundException(String.format("Repair with reference : %s not found",reference));
     }
 
     @GetMapping(path = "/repairs", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<Repair>> read(){
-        return ResponseEntity.ok(repairReparation.getAllRepair());
+        List<Repair> repairs = repairReparation.getAllRepair();
+        if(repairs.isEmpty()) {
+            return ResponseEntity.ok(repairReparation.getAllRepair());
+        }
+        throw new RepairNotFoundException("Any repair found");
     }
 
     @PutMapping(path = "/repairs/{id}")

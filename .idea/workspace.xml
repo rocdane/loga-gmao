@@ -5,16 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33794903-cec8-44ae-8f25-57bd4ee27e15" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/vendor/CustomizedResponseEntityExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/vendor/ErrorDetails.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-server/config" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-server/config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-server/config/gateway-server.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/diagnosis/Diagnosis.java" beforeDir="false" afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/diagnosis/Diagnosis.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/diagnosis/DiagnosisController.java" beforeDir="false" afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/diagnosis/DiagnosisController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/quality/Quality.java" beforeDir="false" afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/quality/Quality.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/reception/Reception.java" beforeDir="false" afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/reception/Reception.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/reception/ReceptionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/reception/ReceptionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/repair/Repair.java" beforeDir="false" afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/repair/Repair.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/repair/RepairController.java" beforeDir="false" afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/repair/RepairController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/vendor/ReferenceBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/vendor/ReferenceBuilder.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,10 +23,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Interface" />
         <option value="Record" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -72,6 +71,9 @@
     "JUnit.ClientResourceTest.getAllClient.executor": "Run",
     "JUnit.ClientResourceTest.getClientById.executor": "Run",
     "JUnit.ClientResourceTest.getClientByName.executor": "Run",
+    "JUnit.DiagnosisManagementTest.createDiagnosis.executor": "Run",
+    "JUnit.DiagnosisManagementTest.getAllDiagnosis.executor": "Run",
+    "JUnit.DiagnosisManagementTest.getDiagnosisById.executor": "Run",
     "JUnit.DossierResourceTest.createDossier.executor": "Run",
     "JUnit.DossierResourceTest.getAllDossier.executor": "Run",
     "JUnit.DossierResourceTest.getAllDossierByAutomobileNumber.executor": "Run",
@@ -79,6 +81,10 @@
     "JUnit.DossierResourceTest.getDossierByAutomobileNumber.executor": "Run",
     "JUnit.DossierResourceTest.getDossierById.executor": "Run",
     "JUnit.DossierResourceTest.getDossierByReference.executor": "Run",
+    "JUnit.ReceptionManagementTest.createReception.executor": "Run",
+    "JUnit.ReceptionManagementTest.getAllReception.executor": "Run",
+    "JUnit.ReceptionManagementTest.getReceptionById.executor": "Run",
+    "JUnit.RepairManagementTest.createRepair.executor": "Run",
     "JUnit.SessionResourceTest.authenticate.executor": "Run",
     "JUnit.UserResourceTest.allUser.executor": "Run",
     "JUnit.UserResourceTest.executor": "Run",
@@ -97,7 +103,7 @@
     "dart.analysis.tool.window.visible": "false",
     "jdk.selected.JAVA_MODULE": "openjdk-19",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/rochdane/IdeaProjects/loga-gmao/maintenance-service/src/main/resources",
+    "last_opened_file_path": "/home/rochdane/IdeaProjects/loga-gmao/maintenance-service/src/main/java/tech/loga/vendor",
     "onboarding.tips.debug.path": "/home/rochdane/IdeaProjects/loga-gmao/loga-cloud/src/main/java/tech/loga/Main.java",
     "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
@@ -113,11 +119,11 @@
       <recent name="tech.loga.user" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/vendor" />
       <recent name="$PROJECT_DIR$/maintenance-service/src/main/resources" />
       <recent name="$PROJECT_DIR$/customer-service" />
       <recent name="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga" />
       <recent name="$PROJECT_DIR$/customer-service/src/main/resources" />
-      <recent name="$PROJECT_DIR$/customer-service/src/main/java/tech/loga" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/customer-service/src/main/resources" />
@@ -128,21 +134,21 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="tech.loga.repair" />
+      <recent name="tech.loga.diagnosis" />
+      <recent name="tech.loga.reception" />
       <recent name="tech.loga.auth" />
       <recent name="tech.loga.dossier" />
-      <recent name="tech.loga.automobile" />
-      <recent name="tech.loga.client" />
-      <recent name="tech.loga.user" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="tech.loga.repair" />
       <recent name="tech.loga.reception" />
       <recent name="tech.loga.quality" />
+      <recent name="tech.loga.diagnosis" />
       <recent name="tech.loga.vendor" />
-      <recent name="tech.loga.user" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.authentication-service">
+  <component name="RunManager" selected="JUnit.RepairManagementTest.orderRepair">
     <configuration name="authentication-service" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="openjdk-19" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -161,49 +167,81 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AuthenticationResourceTest.authenticate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="authentication-service" />
+    <configuration name="DiagnosisManagementTest.getAllDiagnosis" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="maintenance-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tech.loga.auth.*" />
+          <option name="PATTERN" value="tech.loga.diagnosis.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tech.loga.auth" />
-      <option name="MAIN_CLASS_NAME" value="tech.loga.auth.AuthenticationResourceTest" />
-      <option name="METHOD_NAME" value="authenticate" />
+      <option name="PACKAGE_NAME" value="tech.loga.diagnosis" />
+      <option name="MAIN_CLASS_NAME" value="tech.loga.diagnosis.DiagnosisManagementTest" />
+      <option name="METHOD_NAME" value="getAllDiagnosis" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AuthenticationResourceTest.testAuthenticate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="authentication-service" />
+    <configuration name="RepairManagementTest.createRepair" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="maintenance-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tech.loga.auth.*" />
+          <option name="PATTERN" value="tech.loga.repair.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tech.loga.auth" />
-      <option name="MAIN_CLASS_NAME" value="tech.loga.auth.AuthenticationResourceTest" />
-      <option name="METHOD_NAME" value="testAuthenticate" />
+      <option name="PACKAGE_NAME" value="tech.loga.repair" />
+      <option name="MAIN_CLASS_NAME" value="tech.loga.repair.RepairManagementTest" />
+      <option name="METHOD_NAME" value="createRepair" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserResourceTest.allUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="authentication-service" />
+    <configuration name="RepairManagementTest.getAllRepair" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="maintenance-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tech.loga.user.*" />
+          <option name="PATTERN" value="tech.loga.repair.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tech.loga.user" />
-      <option name="MAIN_CLASS_NAME" value="tech.loga.user.UserResourceTest" />
-      <option name="METHOD_NAME" value="allUser" />
+      <option name="PACKAGE_NAME" value="tech.loga.repair" />
+      <option name="MAIN_CLASS_NAME" value="tech.loga.repair.RepairManagementTest" />
+      <option name="METHOD_NAME" value="getAllRepair" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RepairManagementTest.getRepairById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="maintenance-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tech.loga.repair.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tech.loga.repair" />
+      <option name="MAIN_CLASS_NAME" value="tech.loga.repair.RepairManagementTest" />
+      <option name="METHOD_NAME" value="getRepairById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RepairManagementTest.orderRepair" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="maintenance-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tech.loga.repair.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tech.loga.repair" />
+      <option name="MAIN_CLASS_NAME" value="tech.loga.repair.RepairManagementTest" />
+      <option name="METHOD_NAME" value="orderRepair" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -253,33 +291,6 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose.yml.data-server: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="services">
-            <list>
-              <option value="data-server" />
-            </list>
-          </option>
-          <option name="sourceFilePath" value="docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
-    <configuration name="jenkins.jenkins: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="envFilePath" value="" />
-          <option name="services">
-            <list>
-              <option value="jenkins" />
-            </list>
-          </option>
-          <option name="sourceFilePath" value="../../Documents/N2A.CC/full-stack/jenkins/docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <configuration name="loga-gmao" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
       <deployment type="dockerfile">
         <settings>
@@ -294,20 +305,20 @@
       <item itemvalue="Application.cloud-server" />
       <item itemvalue="Application.authentication-service" />
       <item itemvalue="Docker.loga-gmao" />
-      <item itemvalue="Docker.docker-compose.yml.data-server: Compose Deployment" />
-      <item itemvalue="Docker.jenkins.jenkins: Compose Deployment" />
-      <item itemvalue="JUnit.AuthenticationResourceTest.authenticate" />
-      <item itemvalue="JUnit.AuthenticationResourceTest.testAuthenticate" />
-      <item itemvalue="JUnit.UserResourceTest.allUser" />
+      <item itemvalue="JUnit.DiagnosisManagementTest.getAllDiagnosis" />
+      <item itemvalue="JUnit.RepairManagementTest.createRepair" />
+      <item itemvalue="JUnit.RepairManagementTest.getAllRepair" />
+      <item itemvalue="JUnit.RepairManagementTest.getRepairById" />
+      <item itemvalue="JUnit.RepairManagementTest.orderRepair" />
       <item itemvalue="Maven.loga-gmao [clean,package,-DskipTests]" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.docker-compose.yml.data-server: Compose Deployment" />
-        <item itemvalue="Docker.jenkins.jenkins: Compose Deployment" />
-        <item itemvalue="JUnit.AuthenticationResourceTest.authenticate" />
-        <item itemvalue="JUnit.AuthenticationResourceTest.testAuthenticate" />
-        <item itemvalue="JUnit.UserResourceTest.allUser" />
+        <item itemvalue="JUnit.RepairManagementTest.orderRepair" />
+        <item itemvalue="JUnit.RepairManagementTest.getRepairById" />
+        <item itemvalue="JUnit.RepairManagementTest.getAllRepair" />
+        <item itemvalue="JUnit.RepairManagementTest.createRepair" />
+        <item itemvalue="JUnit.DiagnosisManagementTest.getAllDiagnosis" />
       </list>
     </recent_temporary>
   </component>

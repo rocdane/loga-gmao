@@ -37,12 +37,20 @@ public class ReceptionController {
 
     @GetMapping(path = "/receptions", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<Reception>> read() {
-        return ResponseEntity.ok(receptionManagement.getAllReception());
+        List<Reception> receptions = receptionManagement.getAllReception();
+        if(receptions.isEmpty()){
+            throw new ReceptionNotFoundException("Any reception found");
+        }
+        return ResponseEntity.ok(receptions);
     }
 
     @GetMapping(path = "/receptions/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Reception> read(@PathVariable Long id){
-        return ResponseEntity.ok(receptionManagement.getReceptionById(id));
+        Reception reception = receptionManagement.getReceptionById(id);
+        if(reception!=null){
+            return ResponseEntity.ok(receptionManagement.getReceptionById(id));
+        }
+        throw new ReceptionNotFoundException(String.format("Reception with id : %d not found",id));
     }
 
     @GetMapping(path = "/receptions/report/{id}", produces = MediaType.APPLICATION_PDF_VALUE)
