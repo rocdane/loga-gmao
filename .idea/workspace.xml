@@ -5,42 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33794903-cec8-44ae-8f25-57bd4ee27e15" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/report-service/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report-service/entrypoint.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report-service/src/main/java/tech/loga/notifier/chat/ChatController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report-service/src/main/java/tech/loga/notifier/chat/ChatMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report-service/src/main/java/tech/loga/notifier/chat/MessageType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report-service/src/main/java/tech/loga/notifier/email/EmailController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report-service/src/main/java/tech/loga/notifier/email/EmailMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report-service/src/main/java/tech/loga/notifier/email/EmailSenderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report-service/src/main/java/tech/loga/notifier/email/IEmailSenderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report-service/src/main/java/tech/loga/notifier/sms/ISmsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report-service/src/main/java/tech/loga/notifier/sms/SmsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report-service/src/main/java/tech/loga/notifier/sms/SmsMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report-service/src/main/java/tech/loga/notifier/sms/SmsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report-service/src/main/java/tech/loga/report/ReportController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report-service/src/main/java/tech/loga/report/ReportErrorException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report-service/src/main/java/tech/loga/report/ReportManagement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report-service/src/main/java/tech/loga/report/ReportResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report-service/src/main/java/tech/loga/report/Response.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report-service/src/main/java/tech/loga/report/StorageErrorException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report-service/src/main/java/tech/loga/report/StorageManagement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report-service/src/main/java/tech/loga/report/StorageResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report-service/src/main/java/tech/loga/vendor/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report-service/src/main/java/tech/loga/vendor/Crypto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report-service/src/main/java/tech/loga/vendor/CustomizedResponseEntityExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report-service/src/main/java/tech/loga/vendor/Database.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report-service/src/main/java/tech/loga/vendor/ErrorDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report-service/src/main/java/tech/loga/vendor/Logger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report-service/src/main/java/tech/loga/vendor/WebSockerEventListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report-service/src/main/java/tech/loga/vendor/WebSocket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-server/config" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-server/config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-server/config/gateway-server.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +99,7 @@
     "dart.analysis.tool.window.visible": "false",
     "jdk.selected.JAVA_MODULE": "openjdk-19",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/rochdane/IdeaProjects/loga-gmao/report-service",
+    "last_opened_file_path": "/home/rochdane/IdeaProjects/loga-gmao/report-service/src/main/resources",
     "onboarding.tips.debug.path": "/home/rochdane/IdeaProjects/loga-gmao/loga-cloud/src/main/java/tech/loga/Main.java",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
@@ -149,9 +115,9 @@
       <recent name="tech.loga.user" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/report-service/src/main/resources" />
       <recent name="$PROJECT_DIR$/report-service" />
       <recent name="$PROJECT_DIR$/report-service/src/main/java/tech/loga" />
-      <recent name="$PROJECT_DIR$/report-service/src/main/resources" />
       <recent name="$PROJECT_DIR$/maintenance-service" />
       <recent name="$PROJECT_DIR$/maintenance-service/src/main/java/tech/loga/vendor" />
     </key>
