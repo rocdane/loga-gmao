@@ -23,5 +23,6 @@
         <module>authentication-service</module>
         <module>customer-service</module>
         <module>maintenance-service</module>
+        <module>report-service</module>
     </modules>
 </project>

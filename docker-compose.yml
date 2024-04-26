@@ -113,7 +113,6 @@ services:
         ipv4_address: 172.20.0.10
     container_name: customer-service
 
-
   maintenance-service:
     build:
       context: ./maintenance-service

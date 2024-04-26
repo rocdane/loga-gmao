@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<jdbcDataAdapter class="net.sf.jasperreports.data.jdbc.JdbcDataAdapterImpl">
+  <name>loga</name>
+  <driver>org.postgresql.Driver</driver>
+  <username>loga</username>
+  <password>Log@2020</password>
+  <url>jdbc:postgresql://localhost:5432/loga</url>
+  <database></database>
+  <savePassword>true</savePassword>
+  <serverAddress></serverAddress>
+</jdbcDataAdapter>
