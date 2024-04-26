@@ -1,4 +1,4 @@
-package tech.loga.notifier.email;
+package tech.loga.email;
 
 import org.springframework.web.multipart.MultipartFile;
 

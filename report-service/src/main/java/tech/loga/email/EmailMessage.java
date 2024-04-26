@@ -1,4 +1,4 @@
-package tech.loga.notifier.email;
+package tech.loga.email;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

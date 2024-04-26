@@ -1,4 +1,4 @@
-package tech.loga.notifier.chat;
+package tech.loga.chat;
 
 public enum MessageType {
     CHAT,

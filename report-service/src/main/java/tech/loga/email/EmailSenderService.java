@@ -1,4 +1,4 @@
-package tech.loga.notifier.email;
+package tech.loga.email;
 
 import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeMessage;

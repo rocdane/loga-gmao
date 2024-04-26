@@ -1,4 +1,4 @@
-package tech.loga.notifier.email;
+package tech.loga.email;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;

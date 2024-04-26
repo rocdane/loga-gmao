@@ -1,4 +1,4 @@
-package tech.loga.notifier.chat;
+package tech.loga.sms;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,7 +9,6 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class ChatMessage {
-    private String content, sender;
-    private MessageType type;
+public class SmsMessage {
+    private String to, subject, message;
 }

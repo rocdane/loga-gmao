@@ -1,4 +1,4 @@
-package tech.loga.notifier.sms;
+package tech.loga.sms;
 
 import org.springframework.stereotype.Service;
 

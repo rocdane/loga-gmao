@@ -1,4 +1,4 @@
-package tech.loga.notifier.chat;
+package tech.loga.chat;
 
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.Payload;
