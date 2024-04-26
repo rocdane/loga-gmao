@@ -5,56 +5,68 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import tech.loga.api.ReportService;
 
 import java.util.List;
 
+@CrossOrigin
 @RestController
-@CrossOrigin(origins = "*")
 @RequestMapping("/maintenance-service")
 public class ReceptionController {
 
-    @Autowired
-    private ReceptionManagement receptionManagement;
+    private final ReceptionManagement receptionManagement;
+    private final ReportService reportService;
 
-    //private ReportService reportService;
+    @Autowired
+    public ReceptionController(ReceptionManagement receptionManagement,
+                               ReportService reportService) {
+        this.receptionManagement = receptionManagement;
+        this.reportService = reportService;
+    }
 
     @PostMapping(path = "/receptions", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Reception> create(@RequestBody ReceptionRequest request){
-        Reception reception = receptionManagement.createReception(new Reception(
-                        request.customer(),
-                        request.employee(),
-                        request.mileage(),
-                        request.description(),
-                        request.notices()
-        ));
-        if(reception!=null){
+        try {
+            Reception reception = receptionManagement.createReception(new Reception(
+                    request.customer(),
+                    request.employee(),
+                    request.mileage(),
+                    request.description(),
+                    request.notices()
+            ));
             return ResponseEntity.ok(reception);
-        }else{
-            throw new ReceptionRegistrationFailedException("Reception registration failed");
+        }catch (Exception e) {
+            throw new ReceptionRegistrationFailedException("Reception registration failed : \n"+e.getMessage());
         }
-
     }
 
     @GetMapping(path = "/receptions", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<Reception>> read() {
-        List<Reception> receptions = receptionManagement.getAllReception();
-        if(receptions.isEmpty()){
-            throw new ReceptionNotFoundException("Any reception found");
+        try {
+            List<Reception> receptions = receptionManagement.getAllReception();
+            return ResponseEntity.ok(receptions);
+        }catch (Exception e){
+            throw new ReceptionNotFoundException("Failed to fetch reception list");
         }
-        return ResponseEntity.ok(receptions);
     }
 
     @GetMapping(path = "/receptions/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Reception> read(@PathVariable Long id){
-        Reception reception = receptionManagement.getReceptionById(id);
-        if(reception!=null){
-            return ResponseEntity.ok(receptionManagement.getReceptionById(id));
+        try {
+            Reception reception = receptionManagement.getReceptionById(id);
+            return ResponseEntity.ok(reception);
+        }catch (Exception e){
+            throw new ReceptionNotFoundException(String.format("Reception with id : %d not found : %s",id,e.getMessage()));
         }
-        throw new ReceptionNotFoundException(String.format("Reception with id : %d not found",id));
     }
 
     @GetMapping(path = "/receptions/report/{id}", produces = MediaType.APPLICATION_PDF_VALUE)
-    public void report(HttpServletResponse response, @PathVariable Long id) {
-        //reportService.produceReportById(response,"reception",id);
+    public void report(@PathVariable Long id, HttpServletResponse response) {
+        try {
+            Reception reception = receptionManagement.getReceptionById(id);
+            reportService.report(reception,"reception",response);
+        }catch (Exception e){
+            throw new ReceptionNotFoundException("Reception report failed : \n"+e.getMessage());
+        }
     }
 }

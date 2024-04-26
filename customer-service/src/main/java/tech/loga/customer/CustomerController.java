@@ -45,77 +45,85 @@ public class CustomerController {
 
     @PostMapping(path = "/customers", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Customer> createCustomer(@RequestBody Customer customer) {
-        Dossier dossier = dossierManagement.createDossier(customerBuilder.build(customer));
-        if(dossier!=null){
-            return ResponseEntity
-                    .status(HttpStatus.SC_CREATED)
-                    .body(customerMapper.apply(dossier));
+        try {
+            Dossier dossier = dossierManagement.createDossier(customerBuilder.build(customer));
+                return ResponseEntity
+                        .status(HttpStatus.SC_CREATED)
+                        .body(customerMapper.apply(dossier));
+
+        }catch (Exception e){
+            throw new CustomerRegistrationFailedException("Failed to registrate dossier \n"+e.getMessage());
         }
-        throw new CustomerRegistrationFailedException("Failed to registrate dossier");
     }
 
     @PostMapping(path = "/customers/client/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Customer> createCustomer(@RequestBody Automobile automobile,
                                                    @PathVariable Long id) {
-        Client client = clientManagement.getClientById(id);
-        Dossier dossier = dossierManagement.createDossier(customerBuilder.build(client, automobile));
-        if(dossier!=null){
+        try {
+            Client client = clientManagement.getClientById(id);
+            Dossier dossier = dossierManagement.createDossier(customerBuilder.build(client, automobile));
             return ResponseEntity
                     .status(HttpStatus.SC_CREATED)
                     .body(customerMapper.apply(dossier));
+
+        }catch (Exception e){
+            throw new CustomerRegistrationFailedException("Customer registration Failed \n"+e.getMessage());
         }
-        throw new CustomerRegistrationFailedException("Failed to registrate dossier");
     }
 
     @GetMapping(path = "/customers", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<Customer>> getAllCustomer(){
-        List<Customer> customers =
-                dossierManagement
-                        .getAllDossier()
-                        .stream()
-                        .map(customerMapper)
-                        .toList();
-        if(customers.isEmpty()){
-            throw new CustomerNotFoundException("Any customer found!");
+        try {
+            List<Customer> customers =
+                    dossierManagement
+                            .getAllDossier()
+                            .stream()
+                            .map(customerMapper)
+                            .toList();
+            return ResponseEntity.ok(customers);
+        }catch (Exception e){
+            throw new CustomerNotFoundException("Any customer found \n"+e.getMessage());
         }
-        return ResponseEntity.ok(customers);
     }
 
     @GetMapping(path = "/customers/clients", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<Client>> getAllClient(){
-        List<Client> clients = clientManagement.getAllClient();
-        if(clients.isEmpty()){
-            throw new CustomerNotFoundException("Any customer found");
+        try {
+            List<Client> clients = clientManagement.getAllClient();
+            return ResponseEntity.ok(clients);
+        }catch (Exception e){
+            throw new CustomerNotFoundException("Any customer found : \n"+e.getMessage());
         }
-        return ResponseEntity.ok(clients);
     }
 
     @GetMapping(path = "/customers/name/{name}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<Customer>> getAllCustomerByName(@PathVariable String name){
-        List<Customer> customers =
-                dossierManagement
-                        .getAllDossierByClientName(name)
-                        .stream()
-                        .map(customerMapper)
-                        .toList();
-        if(customers.isEmpty()){
-            throw new CustomerNotFoundException(String.format("Any Customer found with name : %s",name));
+        try {
+            List<Customer> customers =
+                    dossierManagement
+                            .getAllDossierByClientName(name)
+                            .stream()
+                            .map(customerMapper)
+                            .toList();
+            return ResponseEntity.ok(customers);
+        }catch (Exception e){
+            throw new CustomerNotFoundException(String.format("Customer with name %s not found : \n%s",name, e.getMessage()));
         }
-        return ResponseEntity.ok(customers);
     }
 
     @GetMapping(path = "/customer/number/search/{number}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<Customer>> getAllCustomerByNumber(@PathVariable String number){
-        List<Customer> customers =
-                dossierManagement
-                        .getAllDossierByAutomobileNumber(number)
-                        .stream()
-                        .map(customerMapper)
-                        .toList();
-        if(customers.isEmpty()){
-            throw new CustomerNotFoundException(String.format("Any customer found with number : %s",number));
+        try {
+            List<Customer> customers =
+                    dossierManagement
+                            .getAllDossierByAutomobileNumber(number)
+                            .stream()
+                            .map(customerMapper)
+                            .toList();
+            return ResponseEntity.ok(customers);
+        }catch (Exception e){
+            throw new CustomerNotFoundException(String.format("Customer with number %s not found : \n%s",number, e.getMessage()));
         }
-        return ResponseEntity.ok(customers);
     }
 
     @Retry(name = SERVICE, fallbackMethod = "customerFallback")
@@ -124,11 +132,12 @@ public class CustomerController {
     @CircuitBreaker(name = SERVICE, fallbackMethod = "customerFallback")
     @GetMapping(path = "/customers/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Customer> getCustomer(@PathVariable Long id){
-        Dossier dossier = dossierManagement.getDossierById(id);
-        if(dossier!=null){
+        try {
+            Dossier dossier = dossierManagement.getDossierById(id);
             return ResponseEntity.ok(customerMapper.apply(dossier));
+        }catch (Exception e){
+            throw new CustomerNotFoundException(String.format("Any customer found with id : %d",id));
         }
-        throw new CustomerNotFoundException(String.format("Any customer found with id : %d",id));
     }
 
     @Retry(name = SERVICE, fallbackMethod = "customerFallback")
@@ -137,11 +146,12 @@ public class CustomerController {
     @CircuitBreaker(name = SERVICE, fallbackMethod = "customerFallback")
     @GetMapping(path = "/customers/client/{number}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Customer> getCustomerByNumber(@PathVariable String number){
-        Dossier dossier = dossierManagement.getDossierByAutomobileNumber(number);
-        if(dossier!=null){
+        try {
+            Dossier dossier = dossierManagement.getDossierByAutomobileNumber(number);
             return ResponseEntity.ok(customerMapper.apply(dossier));
+        }catch (Exception e){
+            throw new CustomerNotFoundException(String.format("Customer with number %s not found \n %s",number, e.getMessage()));
         }
-        throw new CustomerNotFoundException(String.format("Any Customer found with number : %s",number));
     }
 
     @Retry(name = SERVICE, fallbackMethod = "customerFallback")
@@ -150,11 +160,12 @@ public class CustomerController {
     @CircuitBreaker(name = SERVICE, fallbackMethod = "customerFallback")
     @GetMapping(path = "/customers/dossier/{reference}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Customer> getCustomerByReference(@PathVariable String reference){
-        Dossier dossier = dossierManagement.getDossierByReference(reference);
-        if(dossier!=null){
+        try {
+            Dossier dossier = dossierManagement.getDossierByReference(reference);
             return ResponseEntity.ok(customerMapper.apply(dossier));
+        }catch (Exception e){
+            throw new CustomerNotFoundException(String.format("Customer with reference : %s not found \n%s",reference, e.getMessage()));
         }
-        throw new CustomerNotFoundException(String.format("Any Customer found with reference : %s",reference));
     }
 
     @PutMapping(path = "/dossiers/{id}")
@@ -162,7 +173,7 @@ public class CustomerController {
         try {
             dossierManagement.editDossier(dossier,id);
         }catch (Exception e){
-            throw new CustomerRegistrationFailedException(String.format("Failed to update customer data : %s",id));
+            throw new CustomerRegistrationFailedException(String.format("Customer with id :%d registration failed : %s",id,e.getMessage()));
         }
     }
 

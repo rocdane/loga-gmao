@@ -25,4 +25,12 @@ public class QualityResource implements QualityManagement {
         quality.setReference(referenceBuilder.build(quality.getCustomer()));
         return qualityRepository.save(quality);
     }
+
+    @Override
+    public Quality getQualityById(Long id) {
+        if(qualityRepository.findById(id).isPresent()){
+            return qualityRepository.findById(id).get();
+        }
+        throw new RuntimeException(String.format("Quality with id : %d not found",id));
+    }
 }

@@ -33,7 +33,7 @@
 	</style>
 	<subDataset name="Notice" uuid="5b1de83e-1cc2-4dcb-bebc-00eb2129b169">
 		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
-		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.jrdax"/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
 		<parameter name="ID" class="java.lang.Long">
 			<parameterDescription><![CDATA[$P{ID}]]></parameterDescription>
 			<defaultValueExpression><![CDATA[$P{ID}]]></defaultValueExpression>
@@ -112,7 +112,7 @@ WHERE
 		<property name="com.jaspersoft.studio.field.label" value="reference"/>
 		<property name="com.jaspersoft.studio.field.tree.path" value="reception"/>
 	</field>
-	<field name="profile" class="java.lang.String">
+	<field name="employee" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.name" value="profile"/>
 		<property name="com.jaspersoft.studio.field.label" value="profile"/>
 		<property name="com.jaspersoft.studio.field.tree.path" value="reception"/>
@@ -142,7 +142,7 @@ WHERE
 		<property name="com.jaspersoft.studio.field.label" value="model"/>
 		<property name="com.jaspersoft.studio.field.tree.path" value="automobile"/>
 	</field>
-	<field name="name" class="java.lang.String">
+	<field name="customer" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.name" value="name"/>
 		<property name="com.jaspersoft.studio.field.label" value="name"/>
 		<property name="com.jaspersoft.studio.field.tree.path" value="client"/>
@@ -341,7 +341,7 @@ WHERE
 					<textElement textAlignment="Right" verticalAlignment="Middle">
 						<paragraph leftIndent="2" rightIndent="2" spacingBefore="2" spacingAfter="2"/>
 					</textElement>
-					<textFieldExpression><![CDATA[$F{name}.toUpperCase()]]></textFieldExpression>
+					<textFieldExpression><![CDATA[$F{customer}.toUpperCase()]]></textFieldExpression>
 				</textField>
 				<staticText>
 					<reportElement x="100" y="0" width="10" height="20" uuid="4fb737ba-64a5-43b5-9448-0efe5ec7d5fe">
@@ -475,7 +475,7 @@ WHERE
 								<textElement textAlignment="Center" verticalAlignment="Middle">
 									<font isBold="true"/>
 								</textElement>
-								<text><![CDATA[Décision]]></text>
+								<text><![CDATA[Avis]]></text>
 							</staticText>
 						</jr:columnHeader>
 						<jr:detailCell style="Table 1_TD" height="20">
@@ -520,7 +520,7 @@ WHERE
 				<textField textAdjust="StretchHeight">
 					<reportElement x="10" y="49" width="250" height="21" uuid="57f2bdb3-7fd9-4d90-849f-38904190213d"/>
 					<textElement textAlignment="Center" verticalAlignment="Middle"/>
-					<textFieldExpression><![CDATA[$F{profile}]]></textFieldExpression>
+					<textFieldExpression><![CDATA[$F{employee}]]></textFieldExpression>
 				</textField>
 			</frame>
 		</band>
