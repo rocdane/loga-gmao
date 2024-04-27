@@ -50,8 +50,7 @@ public class ReportController {
         response.addHeader("Content-Disposition", "inline; filename="+path+".pdf");
 
         try {
-            OutputStream outputStream = response.getOutputStream();
-            REPORT_SERVICE.report(file,data,outputStream);
+            REPORT_SERVICE.report(file,data,response.getOutputStream());
         } catch (IOException e) {
             throw new ReportErrorException(e.getMessage());
         }
@@ -71,8 +70,7 @@ public class ReportController {
         response.addHeader("Content-Disposition", "inline; filename="+path+".pdf");
 
         try {
-            OutputStream outputStream = response.getOutputStream();
-            REPORT_SERVICE.report(file,data,outputStream);
+            REPORT_SERVICE.report(file,data,response.getOutputStream());
         } catch (IOException e) {
             throw new ReportErrorException(e.getMessage());
         }

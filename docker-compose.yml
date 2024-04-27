@@ -154,6 +154,7 @@ services:
       loga:
         ipv4_address: 172.20.0.10
     container_name: report-service
+
 networks:
   loga:
     driver: bridge

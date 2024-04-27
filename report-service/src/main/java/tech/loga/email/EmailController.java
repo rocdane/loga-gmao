@@ -6,19 +6,19 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+@CrossOrigin
 @RestController
-@CrossOrigin("*")
 @RequestMapping("/reporting-service")
 public class EmailController {
 
     @Autowired
-    private IEmailSenderService emailSenderService;
+    private EmailManagement emailSenderService;
 
     @PostMapping(path = "/email", produces = MediaType.APPLICATION_JSON_VALUE)
     ResponseEntity<String> sendEmail(@RequestBody EmailMessage emailMessage){
         try {
             emailSenderService.sendMessage(emailMessage);
-            return ResponseEntity.ok("Success");
+            return ResponseEntity.ok("Message send successfully");
         }catch (Exception e){
             throw new RuntimeException("Email failed\n"+e.getMessage());
         }
@@ -26,7 +26,11 @@ public class EmailController {
 
     @PostMapping(path = "/email/files", produces = MediaType.APPLICATION_JSON_VALUE)
     ResponseEntity<String> sendEmailWithAttachments(@RequestBody EmailMessage emailMessage, @RequestParam MultipartFile[] files){
-        emailSenderService.sendMessage(emailMessage, files);
-        return ResponseEntity.ok("Success");
+        try {
+            emailSenderService.sendMessage(emailMessage, files);
+            return ResponseEntity.ok("Message send successfully");
+        }catch (Exception e){
+            throw new RuntimeException("Email failed\n"+e.getMessage());
+        }
     }
 }

@@ -9,12 +9,10 @@
       <change beforePath="$PROJECT_DIR$/cloud-server/config" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-server/config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-server/config/gateway-server.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report-service/src/main/java/tech/loga/vendor/Crypto.java" beforeDir="false" afterPath="$PROJECT_DIR$/report-service/src/main/java/tech/loga/vendor/Crypto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report-service/src/main/java/tech/loga/vendor/CustomizedResponseEntityExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/report-service/src/main/java/tech/loga/vendor/CustomizedResponseEntityExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report-service/src/main/java/tech/loga/vendor/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/report-service/src/main/java/tech/loga/vendor/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report-service/src/main/java/tech/loga/vendor/ErrorDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/report-service/src/main/java/tech/loga/vendor/ErrorDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report-service/src/main/java/tech/loga/vendor/Logger.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report-service/src/main/java/tech/loga/vendor/WebSockerEventListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/report-service/src/main/java/tech/loga/vendor/WebSocketEventListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report-service/src/main/java/tech/loga/email/EmailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/report-service/src/main/java/tech/loga/email/EmailController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report-service/src/main/java/tech/loga/email/EmailSenderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/report-service/src/main/java/tech/loga/email/EmailSenderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report-service/src/main/java/tech/loga/email/IEmailSenderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/report-service/src/main/java/tech/loga/email/EmailManagement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report-service/src/main/java/tech/loga/report/ReportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/report-service/src/main/java/tech/loga/report/ReportController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

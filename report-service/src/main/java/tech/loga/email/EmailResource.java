@@ -17,12 +17,12 @@ import java.util.Objects;
 
 @Slf4j
 @Service
-public class EmailSenderService implements IEmailSenderService{
+public class EmailResource implements EmailManagement {
 
     private final JavaMailSender javaMailSender;
 
     @Autowired
-    public EmailSenderService(JavaMailSender javaMailSender) {
+    public EmailResource(JavaMailSender javaMailSender) {
         this.javaMailSender = javaMailSender;
     }
 
@@ -35,7 +35,7 @@ public class EmailSenderService implements IEmailSenderService{
         try {
             this.javaMailSender.send(mailMessage);
         }catch (Exception e){
-            log.error(String.format("Failed sending email: {}",e.getMessage()));
+            log.error("Failed sending email: {}", e.getMessage());
             throw new RuntimeException(e);
         }
     }
@@ -55,7 +55,7 @@ public class EmailSenderService implements IEmailSenderService{
             }
             javaMailSender.send(message);
         } catch (MessagingException | IOException e) {
-            log.error(String.format("Failed sending email: {}",e.getMessage()));
+            log.error("Failed sending email: {}", e.getMessage());
             throw new RuntimeException(e);
         }
     }
