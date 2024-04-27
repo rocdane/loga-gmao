@@ -6,9 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="33794903-cec8-44ae-8f25-57bd4ee27e15" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/user/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/user/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-server/config" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-server/config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-server/config/gateway-server.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report-service/src/main/java/tech/loga/vendor/Crypto.java" beforeDir="false" afterPath="$PROJECT_DIR$/report-service/src/main/java/tech/loga/vendor/Crypto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report-service/src/main/java/tech/loga/vendor/CustomizedResponseEntityExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/report-service/src/main/java/tech/loga/vendor/CustomizedResponseEntityExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report-service/src/main/java/tech/loga/vendor/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/report-service/src/main/java/tech/loga/vendor/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report-service/src/main/java/tech/loga/vendor/ErrorDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/report-service/src/main/java/tech/loga/vendor/ErrorDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report-service/src/main/java/tech/loga/vendor/Logger.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report-service/src/main/java/tech/loga/vendor/WebSockerEventListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/report-service/src/main/java/tech/loga/vendor/WebSocketEventListener.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,9 +118,9 @@
 }</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="tech.loga.user" />
       <recent name="tech.loga.quality" />
       <recent name="tech.loga.reception" />
-      <recent name="tech.loga.user" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/report-service/src/main/resources" />

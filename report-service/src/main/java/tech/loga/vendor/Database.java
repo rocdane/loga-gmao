@@ -1,5 +1,6 @@
 package tech.loga.vendor;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
@@ -7,6 +8,7 @@ import org.springframework.stereotype.Component;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
+@Slf4j
 @Component
 public class Database {
 
@@ -22,9 +24,9 @@ public class Database {
         try {
             Class.forName(DRIVER);
             connection = DriverManager.getConnection(JDBC_URL, USERNAME, PASSWORD);
-        }
-        catch (Exception e) {
-            e.printStackTrace();
+        }catch (Exception e) {
+            log.error("Connexion establishing failed {}",e.getMessage());
+            throw new RuntimeException(e.getMessage());
         }
     }
 

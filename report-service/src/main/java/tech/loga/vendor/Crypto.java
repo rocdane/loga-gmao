@@ -1,5 +1,6 @@
 package tech.loga.vendor;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
 import javax.crypto.*;
@@ -11,6 +12,7 @@ import java.security.SecureRandom;
 import java.util.Base64;
 import java.util.Random;
 
+@Slf4j
 @Component
 public class Crypto
 {
@@ -23,9 +25,8 @@ public class Crypto
         try {
             this.key = this.generateKey(128);
             this.ivps = this.generateIv();
-        }
-        catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
+        }catch (NoSuchAlgorithmException e) {
+            log.info("Failed to generate key because {}",e.getMessage());
         }
     }
     
