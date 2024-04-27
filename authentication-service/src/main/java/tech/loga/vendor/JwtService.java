@@ -18,7 +18,11 @@ import java.util.function.Function;
 @Service
 public class JwtService {
 
-    private static final String SECRET_KEY = Crypto.getInstance(256).generateToken(256);
+    private final String SECRET_KEY;
+
+    private JwtService(){
+        SECRET_KEY = Crypto.getInstance(256).generateToken(256);
+    }
 
     public String extractUsername(String token) {
         return extractClaim(token, Claims::getSubject);
@@ -28,10 +32,7 @@ public class JwtService {
         return generateToken(new HashMap<>(),username);
     }
 
-    public String generateToken(
-        Map<String, Object> extraClaims,
-        String username
-    ){
+    public String generateToken(Map<String, Object> extraClaims, String username){
         return Jwts
                 .builder()
                 .setClaims(extraClaims)
