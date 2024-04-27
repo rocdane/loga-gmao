@@ -12,12 +12,12 @@ import org.springframework.web.multipart.MultipartFile;
 public class EmailController {
 
     @Autowired
-    private EmailManagement emailSenderService;
+    private EmailManagement emailManagement;
 
     @PostMapping(path = "/email", produces = MediaType.APPLICATION_JSON_VALUE)
     ResponseEntity<String> sendEmail(@RequestBody EmailMessage emailMessage){
         try {
-            emailSenderService.sendMessage(emailMessage);
+            emailManagement.sendMessage(emailMessage);
             return ResponseEntity.ok("Message send successfully");
         }catch (Exception e){
             throw new RuntimeException("Email failed\n"+e.getMessage());
@@ -27,7 +27,7 @@ public class EmailController {
     @PostMapping(path = "/email/files", produces = MediaType.APPLICATION_JSON_VALUE)
     ResponseEntity<String> sendEmailWithAttachments(@RequestBody EmailMessage emailMessage, @RequestParam MultipartFile[] files){
         try {
-            emailSenderService.sendMessage(emailMessage, files);
+            emailManagement.sendMessage(emailMessage, files);
             return ResponseEntity.ok("Message send successfully");
         }catch (Exception e){
             throw new RuntimeException("Email failed\n"+e.getMessage());
