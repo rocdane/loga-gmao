@@ -12,11 +12,15 @@ import java.util.List;
 @Service
 public class DossierResource implements DossierManagement {
 
-    @Autowired
-    private DossierRepository dossierRepository;
+    private final ClientManagement clientManagement;
+    private final DossierRepository dossierRepository;
 
     @Autowired
-    private ClientManagement clientManagement;
+    public DossierResource(DossierRepository dossierRepository,
+                           ClientManagement clientManagement) {
+        this.dossierRepository = dossierRepository;
+        this.clientManagement = clientManagement;
+    }
 
     @Override
     @Transactional
