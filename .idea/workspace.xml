@@ -6,10 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="33794903-cec8-44ae-8f25-57bd4ee27e15" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/user/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/tech/loga/user/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-server/config" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-server/config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-server/config/gateway-server.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report-service/src/main/resources/jrxml/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report-service/src/main/resources/jrxml/reception.jrxml" beforeDir="false" afterPath="$PROJECT_DIR$/report-service/src/main/resources/jrxml/reception.jrxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,10 +18,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Record" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>

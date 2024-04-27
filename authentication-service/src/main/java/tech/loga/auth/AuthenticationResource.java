@@ -9,11 +9,16 @@ import tech.loga.vendor.JwtService;
 @Service
 public class AuthenticationResource implements AuthenticationManagement {
 
-    @Autowired
-    private AuthenticationManager authenticationManager;
+    private final JwtService jwtService;
+    private final AuthenticationManager authenticationManager;
 
     @Autowired
-    private JwtService jwtService;
+    public AuthenticationResource(JwtService jwtService,
+                                  AuthenticationManager authenticationManager) {
+        this.jwtService = jwtService;
+        this.authenticationManager = authenticationManager;
+    }
+
 
     @Override
     public String authenticate(AuthenticationRequest authenticationRequest) {

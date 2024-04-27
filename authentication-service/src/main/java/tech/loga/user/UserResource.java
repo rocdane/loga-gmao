@@ -20,7 +20,8 @@ public class UserResource implements UserManagement{
     @Autowired
     public UserResource(PasswordEncoder passwordEncoder,
                         UserRepository userRepository,
-                        UserDTOMapper userDTOMapper, JwtService jwtService) {
+                        UserDTOMapper userDTOMapper,
+                        JwtService jwtService) {
         this.passwordEncoder = passwordEncoder;
         this.userRepository = userRepository;
         this.userDTOMapper = userDTOMapper;

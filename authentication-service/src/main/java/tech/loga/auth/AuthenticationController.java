@@ -9,8 +9,8 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+@CrossOrigin
 @RestController
-@CrossOrigin(origins = "*")
 @RequestMapping("/authentication-service")
 public class AuthenticationController {
 
@@ -38,10 +38,14 @@ public class AuthenticationController {
     @CircuitBreaker(name = SERVICE, fallbackMethod = "authenticateFallback")
     @GetMapping(path = "/auth/validate", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<String> authenticate(@RequestParam("token") String token){
-        if(authenticationManagement.authenticate(token)){
-            return ResponseEntity.ok(token);
-        }else{
+        try {
+            boolean isValid = authenticationManagement.authenticate(token);
+            if(isValid){
+                return ResponseEntity.ok(token);
+            }
             throw new AuthenticationErrorException("Authenticated session expired");
+        }catch (Exception e){
+            throw new AuthenticationErrorException("Authentication validation failed : \n"+e.getMessage());
         }
     }
 

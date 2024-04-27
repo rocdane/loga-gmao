@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin
 @RestController
-@CrossOrigin(origins = "*")
 @RequestMapping("/authentication-service")
 public class UserController {
 
@@ -22,13 +22,13 @@ public class UserController {
 
     private final String SERVICE = "authentication-service";
 
-    @PostMapping(path = "/registrate", produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(path = "/register", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<String> register(@RequestBody UserRegisterRequest userRegisterRequest){
-        String token = userManagement.registerUser(userRegisterRequest);
-        if (token != null){
-            return ResponseEntity.ok("User registration success.");
-        }else{
-            throw new AuthenticationErrorException("User registration failed.");
+        try {
+            String token = userManagement.registerUser(userRegisterRequest);
+            return ResponseEntity.ok(token);
+        }catch (Exception e){
+            throw new UserRegistrationFailedException("User registration failed.\n"+e.getMessage());
         }
     }
 
@@ -38,17 +38,29 @@ public class UserController {
     @CircuitBreaker(name = SERVICE, fallbackMethod = "userFallback")
     @GetMapping(path = "/users",produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<UserDTO>> list() {
-        return ResponseEntity.ok(userManagement.getAllUser());
+        try {
+            return ResponseEntity.ok(userManagement.getAllUser());
+        }catch (Exception e){
+            throw new UserNotFoundException("Any user found :\n"+e.getMessage());
+        }
     }
 
     @PutMapping(path = "/update/{id}")
     public void update(@RequestBody UserUpdateRequest userUpdateRequest, @PathVariable Long id){
-        userManagement.editUser(userUpdateRequest,id);
+        try {
+            userManagement.editUser(userUpdateRequest,id);
+        }catch (Exception e){
+            throw new UserRegistrationFailedException("User registration failed.\n"+e.getMessage());
+        }
     }
 
     @DeleteMapping(path = "/users/edit/{id}")
     public void delete(@PathVariable Long id){
-        userManagement.deleteUser(id);
+        try {
+            userManagement.deleteUser(id);
+        }catch (Exception e){
+            throw new UserNotFoundException(String.format("User with id : %d cannot be deleted \n%s",id,e.getMessage()));
+        }
     }
 
     public String userFallback(Exception e){
