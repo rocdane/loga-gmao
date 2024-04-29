@@ -34,7 +34,7 @@ public class CompanyResource implements CompanyManagement, BranchManagement, Dep
         if(companyRepository.findById(id).isPresent()){
             return companyRepository.findById(id).get();
         }
-        throw new CompanyRegistrationFailedException(String.format("Company with name : %d not found",id));
+        throw new CompanyNotFoundException(String.format("Company with name : %d not found",id));
     }
 
     @Override
@@ -42,7 +42,7 @@ public class CompanyResource implements CompanyManagement, BranchManagement, Dep
         if(companyRepository.findByName(name).isPresent()){
             return companyRepository.findByName(name).get();
         }
-        throw new CompanyRegistrationFailedException(String.format("Company with name : %s not found",name));
+        throw new CompanyNotFoundException(String.format("Company with name : %s not found",name));
     }
 
     @Override

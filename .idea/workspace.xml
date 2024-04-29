@@ -5,24 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33794903-cec8-44ae-8f25-57bd4ee27e15" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/resource-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resource-service/src/main/java/tech/loga/asset/Asset.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resource-service/src/main/java/tech/loga/asset/AssetRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resource-service/src/main/java/tech/loga/company/Branch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resource-service/src/main/java/tech/loga/company/BranchRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resource-service/src/main/java/tech/loga/company/Company.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resource-service/src/main/java/tech/loga/company/CompanyRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resource-service/src/main/java/tech/loga/company/Department.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resource-service/src/main/java/tech/loga/company/DepartmentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resource-service/src/main/java/tech/loga/vendor/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resource-service/src/main/java/tech/loga/vendor/Crypto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resource-service/src/main/java/tech/loga/vendor/Money.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resource-service/src/main/java/tech/loga/vendor/NumberToWords.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-server/config" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-server/config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-server/config/gateway-server.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,8 +18,8 @@
       <list>
         <option value="Record" />
         <option value="JUnit5 Test Class" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -154,11 +138,11 @@
       <recent name="tech.loga.dossier" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="tech.loga.company" />
       <recent name="tech.loga.vendor" />
       <recent name="tech.loga" />
       <recent name="tech.loga.repair" />
       <recent name="tech.loga.reception" />
-      <recent name="tech.loga.quality" />
     </key>
   </component>
   <component name="RunManager" selected="JUnit.RepairManagementTest.orderRepair">
