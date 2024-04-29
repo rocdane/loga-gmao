@@ -24,5 +24,6 @@
         <module>customer-service</module>
         <module>maintenance-service</module>
         <module>report-service</module>
+        <module>resource-service</module>
     </modules>
 </project>
