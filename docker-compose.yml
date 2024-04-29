@@ -155,6 +155,26 @@ services:
         ipv4_address: 172.20.0.10
     container_name: report-service
 
+  resource-service:
+    build:
+      context: ./resource-service
+      dockerfile: ./Dockerfile
+    image: resource-service
+    depends_on:
+      - naming-server
+      - data-server
+    environment:
+      SPRING.DATASOURCE.URL: jdbc:postgresql://data-server:5432/loga
+      SPRING.DATASOURCE.USERNAME: loga
+      SPRING.DATASOURCE.PASSWORD: Log@2024
+      EUREKA.CLIENT.SERVICEURL.DEFAULTZONE: http://naming-server:8761/eureka
+      MANAGEMENT.ZIPKIN.TRACING.ENDPOINT: http://zipkin-server:9411/api/v2/spans
+    ports:
+      - "8005:8005"
+    networks:
+      loga:
+        ipv4_address: 172.20.0.10
+    container_name: resource-service
 networks:
   loga:
     driver: bridge
