@@ -12,11 +12,6 @@ public class AssetResource implements AssetManagement
     private AssetRepository assetRepository;
 
     @Override
-    public Asset createAsset(Asset asset) {
-        return assetRepository.save(asset);
-    }
-
-    @Override
     public Asset getAssetById(Long id) {
         if(assetRepository.findById(id).isPresent()){
             return assetRepository.findById(id).get();
@@ -38,15 +33,15 @@ public class AssetResource implements AssetManagement
     }
 
     @Override
-    public void editAsset(Asset asset, Long id) {
+    public void editAsset(AssetRequest request, Long id) {
         assetRepository
                 .findById(id)
                 .ifPresentOrElse(up -> {
-                    up.setDesignation(asset.getDesignation());
-                    up.setReference(asset.getReference());
+                    up.setDesignation(request.designation());
+                    up.setReference(request.reference());
                     assetRepository.saveAndFlush(up);
                 },() -> {
-                    throw new RuntimeException(String.format("Asset with id : %d not found",id));
+                    throw new RuntimeException(String.format("Update Asset with id : %d failed",id));
                 });
     }
 

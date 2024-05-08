@@ -24,8 +24,11 @@ public class Contract implements Serializable
     @Column(name = "position")
     private String position;
 
+    @Column(name = "leaves")
+    private Integer leaves;
+
     @Column(name = "salary")
-    private Integer salary;
+    private Double salary;
 
     @Column(name = "start_at")
     private Date startAt;

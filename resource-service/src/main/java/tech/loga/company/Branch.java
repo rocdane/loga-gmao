@@ -5,7 +5,6 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import tech.loga.asset.Asset;
 
 import java.io.Serializable;
 import java.util.ArrayList;

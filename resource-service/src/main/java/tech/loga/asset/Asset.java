@@ -24,6 +24,9 @@ public class Asset implements Serializable
     @Column(name = "designation")
     private String designation;
 
+    @Column(name = "value")
+    private Double value;
+
     @Column(name = "entry_on")
     private Date entryOn;
 }

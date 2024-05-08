@@ -44,4 +44,8 @@ public class Employee implements Serializable
     @OneToMany(targetEntity = Contract.class, fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "employee", referencedColumnName = "id")
     private List<Contract> contracts = new ArrayList<>();
+
+    @OneToMany(targetEntity = Leave.class, fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "employee", referencedColumnName = "id")
+    private List<Leave> leaves = new ArrayList<>();
 }

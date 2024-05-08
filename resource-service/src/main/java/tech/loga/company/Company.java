@@ -2,7 +2,6 @@ package tech.loga.company;
 
 import jakarta.persistence.*;
 import lombok.*;
-import tech.loga.employee.Employee;
 
 import java.io.Serializable;
 import java.util.ArrayList;
