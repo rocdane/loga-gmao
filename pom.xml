@@ -25,5 +25,6 @@
         <module>maintenance-service</module>
         <module>report-service</module>
         <module>resource-service</module>
+        <module>finance-service</module>
     </modules>
 </project>
