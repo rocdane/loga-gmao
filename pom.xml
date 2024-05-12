@@ -26,5 +26,6 @@
         <module>report-service</module>
         <module>resource-service</module>
         <module>finance-service</module>
+        <module>part-service</module>
     </modules>
 </project>
