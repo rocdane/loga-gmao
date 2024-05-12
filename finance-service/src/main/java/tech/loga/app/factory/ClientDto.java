@@ -3,8 +3,6 @@ package tech.loga.app.factory;
 import lombok.*;
 
 @Data
-@Getter
-@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public class ClientDto {

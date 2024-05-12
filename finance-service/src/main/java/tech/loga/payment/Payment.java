@@ -20,15 +20,18 @@ public class Payment implements Serializable
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "closed_at")
-    private Date closedAt;
-
-    @Column(name = "mode")
-    private String mode;
-
     @Column(name = "reference")
     private String reference;
 
     @Column(name = "amount")
     private Integer amount;
+
+    @Column(name = "mode")
+    private String mode;
+
+    @Column(name = "created_at")
+    private Date createdAt;
+
+    @Column(name = "closed_at")
+    private Date closedAt;
 }

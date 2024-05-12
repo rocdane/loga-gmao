@@ -6,9 +6,8 @@ import java.io.Serializable;
 import java.util.Date;
 
 @Data
-@Getter
-@Setter
 @ToString
+@NoArgsConstructor
 @AllArgsConstructor
 public class AuthSession implements Serializable
 {
