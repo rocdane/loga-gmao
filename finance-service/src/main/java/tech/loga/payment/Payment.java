@@ -14,7 +14,6 @@ import java.util.Date;
 @Table(name = "payment")
 public class Payment implements Serializable
 {
-
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Column(name = "id")
@@ -24,7 +23,7 @@ public class Payment implements Serializable
     private String reference;
 
     @Column(name = "amount")
-    private Integer amount;
+    private Double amount;
 
     @Column(name = "mode")
     private String mode;

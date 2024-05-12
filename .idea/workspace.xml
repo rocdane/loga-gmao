@@ -7,7 +7,11 @@
     <list default="true" id="33794903-cec8-44ae-8f25-57bd4ee27e15" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/cloud-server/config" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-server/config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-server/config/gateway-server.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finance-service/src/main/java/tech/loga/app/api/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/finance-service/src/main/java/tech/loga/app/api/AuthenticationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finance-service/src/main/java/tech/loga/payment/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/finance-service/src/main/java/tech/loga/payment/Payment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finance-service/src/main/java/tech/loga/payment/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/finance-service/src/main/java/tech/loga/payment/PaymentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finance-service/src/main/java/tech/loga/payment/PaymentManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/finance-service/src/main/java/tech/loga/payment/PaymentManagement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finance-service/src/main/java/tech/loga/payment/PaymentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/finance-service/src/main/java/tech/loga/payment/PaymentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finance-service/src/main/java/tech/loga/payment/PaymentResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/finance-service/src/main/java/tech/loga/payment/PaymentResource.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
