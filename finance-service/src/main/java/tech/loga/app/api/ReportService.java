@@ -10,5 +10,5 @@ import org.springframework.web.bind.annotation.PathVariable;
 public interface ReportService {
 
     @GetMapping(value = "/report-service/{src}/{id}", produces = MediaType.APPLICATION_PDF_VALUE)
-    public void produceReportById(HttpServletResponse response, @PathVariable("src") String src, @PathVariable("id") Long id) ;
+    void produceReportById(HttpServletResponse response, @PathVariable("src") String src, @PathVariable("id") Long id) ;
 }
