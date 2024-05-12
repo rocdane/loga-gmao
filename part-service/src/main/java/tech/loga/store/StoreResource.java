@@ -8,8 +8,15 @@ import java.util.List;
 @Service
 public class StoreResource implements StoreManagement {
 
+    private final ProductRepository productRepository;
+    private final StockRepository stockRepository;
+
     @Autowired
-    private ProductRepository productRepository;
+    public StoreResource(ProductRepository productRepository,
+                         StockRepository stockRepository) {
+        this.productRepository = productRepository;
+        this.stockRepository = stockRepository;
+    }
 
     @Override
     public Product registerProduct(Product product) {
@@ -42,6 +49,46 @@ public class StoreResource implements StoreManagement {
     }
 
     @Override
+    public Stock getStock(Long id) {
+        if(this.stockRepository.findByProductId(id).isPresent()){
+            return this.stockRepository.findByProductId(id).get();
+        }
+        throw new ProductNotFoundException(String.format("Any Stock found for product with id:%d",id));
+    }
+
+    @Override
+    public Stock getStock(String reference) {
+        if(this.stockRepository.findByProductReference(reference).isPresent()){
+            return this.stockRepository.findByProductReference(reference).get();
+        }
+        throw new ProductNotFoundException(String.format("Any Stock found for product with reference:%s",reference));
+    }
+
+    @Override
+    public void increaseStock(Long id, Integer quantity) {
+        this.stockRepository
+                .findByProductId(id)
+                .ifPresentOrElse(stock -> {
+                    stock.increase(quantity);
+                    this.stockRepository.saveAndFlush(stock);
+                },() -> {
+                    throw new RuntimeException(String.format("Failed to increase stock by %d",quantity));
+                });
+    }
+
+    @Override
+    public void decreaseStock(Long id, Integer quantity) {
+        this.stockRepository
+                .findByProductId(id)
+                .ifPresentOrElse(stock -> {
+                    stock.decrease(quantity);
+                    this.stockRepository.saveAndFlush(stock);
+                },() -> {
+                    throw new RuntimeException(String.format("Failed to decrease stock by %d",quantity));
+                });
+    }
+
+    @Override
     public void updateProduct(Product product, Long id) {
         productRepository
                 .findById(id)
@@ -52,7 +99,6 @@ public class StoreResource implements StoreManagement {
                     up.setDesignation(product.getDesignation());
                     up.setDescription(product.getDescription());
                     up.setPrice(product.getPrice());
-                    up.setStock(product.getStock());
                     up.setLimit(product.getLimit());
                     productRepository.saveAndFlush(up);
                 },() -> {

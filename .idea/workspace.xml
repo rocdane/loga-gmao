@@ -5,39 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33794903-cec8-44ae-8f25-57bd4ee27e15" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/part-service/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part-service/entrypoint.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part-service/src/main/java/tech/loga/store/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part-service/src/main/java/tech/loga/store/ProductNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part-service/src/main/java/tech/loga/store/ProductRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part-service/src/main/java/tech/loga/store/StoreController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part-service/src/main/java/tech/loga/store/StoreManagement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part-service/src/main/java/tech/loga/store/StoreResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part-service/src/main/java/tech/loga/supply/Article.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part-service/src/main/java/tech/loga/supply/ArticleNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part-service/src/main/java/tech/loga/supply/Delivery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part-service/src/main/java/tech/loga/supply/DeliveryRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part-service/src/main/java/tech/loga/supply/Furnisher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part-service/src/main/java/tech/loga/supply/FurnisherNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part-service/src/main/java/tech/loga/supply/FurnisherRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part-service/src/main/java/tech/loga/supply/ISupplyService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part-service/src/main/java/tech/loga/supply/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part-service/src/main/java/tech/loga/supply/OrderNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part-service/src/main/java/tech/loga/supply/OrderRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part-service/src/main/java/tech/loga/supply/SupplyService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part-service/src/main/java/tech/loga/trade/Item.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part-service/src/main/java/tech/loga/trade/Sale.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part-service/src/main/java/tech/loga/trade/SaleRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part-service/src/main/java/tech/loga/vendor/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part-service/src/main/java/tech/loga/vendor/Crypto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part-service/src/main/java/tech/loga/vendor/CustomizedResponseEntityExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/part-service/src/main/java/tech/loga/vendor/ErrorDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part-service/src/main/java/tech/loga/delivery/Delivery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part-service/src/main/java/tech/loga/delivery/DeliveryResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part-service/src/main/java/tech/loga/order/OrderManagement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-server/config" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-server/config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-server/config/gateway-server.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part-service/src/main/java/tech/loga/store/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/part-service/src/main/java/tech/loga/store/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part-service/src/main/java/tech/loga/store/StoreManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/part-service/src/main/java/tech/loga/store/StoreManagement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part-service/src/main/java/tech/loga/store/StoreResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/part-service/src/main/java/tech/loga/store/StoreResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part-service/src/main/java/tech/loga/supply/Article.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/part-service/src/main/java/tech/loga/supply/ArticleNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/part-service/src/main/java/tech/loga/supply/Delivery.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/part-service/src/main/java/tech/loga/supply/DeliveryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/part-service/src/main/java/tech/loga/delivery/DeliveryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part-service/src/main/java/tech/loga/supply/Furnisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/part-service/src/main/java/tech/loga/supplier/Supplier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part-service/src/main/java/tech/loga/supply/FurnisherNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/part-service/src/main/java/tech/loga/supplier/SupplierNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part-service/src/main/java/tech/loga/supply/FurnisherRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/part-service/src/main/java/tech/loga/supplier/SupplierRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part-service/src/main/java/tech/loga/supply/ISupplyService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/part-service/src/main/java/tech/loga/supply/Order.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/part-service/src/main/java/tech/loga/supply/OrderNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/part-service/src/main/java/tech/loga/supply/OrderRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/part-service/src/main/java/tech/loga/supply/SupplyService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/part-service/src/main/java/tech/loga/vendor/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/part-service/src/main/java/tech/loga/vendor/App.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,9 +37,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
+        <option value="Record" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="Record" />
       </list>
     </option>
   </component>
@@ -130,7 +119,7 @@
     "dart.analysis.tool.window.visible": "false",
     "jdk.selected.JAVA_MODULE": "openjdk-19",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/rochdane/IdeaProjects/loga-gmao/part-service/src/main/java/tech/loga",
+    "last_opened_file_path": "/home/rochdane/IdeaProjects/loga-gmao/part-service/src/main/java/tech/loga/supply",
     "onboarding.tips.debug.path": "/home/rochdane/IdeaProjects/loga-gmao/loga-cloud/src/main/java/tech/loga/Main.java",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
@@ -141,18 +130,18 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="tech.loga.trade" />
       <recent name="tech.loga.asset" />
       <recent name="tech.loga.company" />
       <recent name="tech.loga.employee" />
       <recent name="tech.loga.user" />
-      <recent name="tech.loga.quality" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/part-service/src/main/java/tech/loga/supply" />
       <recent name="$PROJECT_DIR$/part-service/src/main/java/tech/loga" />
       <recent name="$PROJECT_DIR$/part-service/src/main/resources" />
       <recent name="$PROJECT_DIR$/part-service" />
       <recent name="$PROJECT_DIR$/finance-service/src/main/java/tech/loga/vendor" />
-      <recent name="$PROJECT_DIR$/finance-service/src/main/java/tech/loga" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/customer-service/src/main/resources" />
@@ -170,11 +159,11 @@
       <recent name="tech.loga.dossier" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="tech.loga.supply" />
       <recent name="tech.loga.store" />
+      <recent name="tech.loga.trade" />
       <recent name="tech.loga.invoicing" />
       <recent name="tech.loga.payment" />
-      <recent name="tech.loga.accountant" />
-      <recent name="tech.loga.asset" />
     </key>
   </component>
   <component name="RunManager" selected="JUnit.RepairManagementTest.orderRepair">

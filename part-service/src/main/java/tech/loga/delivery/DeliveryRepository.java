@@ -1,8 +1,8 @@
-package tech.loga.supply;
+package tech.loga.delivery;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface FurnisherRepository extends JpaRepository<Furnisher,Long> {
+public interface DeliveryRepository extends JpaRepository<Delivery,Long> {
 }

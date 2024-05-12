@@ -1,4 +1,4 @@
-package tech.loga.trade;
+package tech.loga.sale;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -10,10 +10,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping("part-service")
-public class TradeController {
+public class SaleController {
 
     @Autowired
-    private TradeManagement tradeManagement;
+    private SaleManagement tradeManagement;
 
     @PostMapping(path = "sales", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Sale> registerSale(Sale sale){

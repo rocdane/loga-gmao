@@ -1,9 +1,9 @@
-package tech.loga.trade;
+package tech.loga.sale;
 
 import java.util.Date;
 import java.util.List;
 
-public interface TradeManagement {
+public interface SaleManagement {
     Sale registerSale(Sale sale);
     Sale getSale(Long id);
     Sale getSale(String reference);

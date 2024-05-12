@@ -1,4 +1,4 @@
-package tech.loga.trade;
+package tech.loga.sale;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -15,7 +15,6 @@ public class Item implements Serializable
 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
     private Long id;
 
     @Column(name = "product")

@@ -1,4 +1,4 @@
-package tech.loga.trade;
+package tech.loga.sale;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -7,7 +7,7 @@ import java.util.Date;
 import java.util.List;
 
 @Service
-public class TradeResource implements TradeManagement {
+public class SaleResource implements SaleManagement {
 
     @Autowired
     private SaleRepository saleRepository;

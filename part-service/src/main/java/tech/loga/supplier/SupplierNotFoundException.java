@@ -1,11 +1,11 @@
-package tech.loga.trade;
+package tech.loga.supplier;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 @ResponseStatus(HttpStatus.NOT_FOUND)
-public class SaleRegistrationFailedException extends RuntimeException {
-    public SaleRegistrationFailedException(String message) {
+public class SupplierNotFoundException extends RuntimeException{
+    public SupplierNotFoundException(String message) {
         super(message);
     }
 }

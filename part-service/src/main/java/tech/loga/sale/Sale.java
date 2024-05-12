@@ -1,4 +1,4 @@
-package tech.loga.trade;
+package tech.loga.sale;
 
 import jakarta.persistence.*;
 import lombok.*;

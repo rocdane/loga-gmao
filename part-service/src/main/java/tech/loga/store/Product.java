@@ -36,9 +36,6 @@ public class Product implements Serializable
     @Column(name = "price")
     private Double price;
 
-    @Column(name = "stock")
-    private Integer stock;
-
     @Column(name = "limit")
     private Integer limit;
 }
