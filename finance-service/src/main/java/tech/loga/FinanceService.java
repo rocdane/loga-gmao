@@ -10,6 +10,6 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @SpringBootApplication
 public class FinanceService {
     public static void main(String[] args) {
-        SpringApplication.run(FinanceService.class,args);
+        SpringApplication.run(FinanceService.class, args);
     }
 }

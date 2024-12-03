@@ -3,22 +3,16 @@ package tech.loga.vendor;
 import jakarta.persistence.EntityManagerFactory;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.JpaVendorAdapter;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
-import tech.loga.user.UserRepository;
-
 import javax.sql.DataSource;
 import java.util.Objects;
 import java.util.Properties;
@@ -31,9 +25,9 @@ public class App {
     private final Environment env;
 
     @Bean
-    CommandLineRunner init() {
+    CommandLineRunner appSignature() {
         return args -> {
-            log.info("Authentication Service Initialized !!!");
+            log.info("loga://authentication-service");
         };
     }
 

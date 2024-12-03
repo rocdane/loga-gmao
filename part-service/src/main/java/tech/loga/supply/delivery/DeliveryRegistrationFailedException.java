@@ -1,11 +1,11 @@
-package tech.loga.order;
+package tech.loga.supply.delivery;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
-public class OrderRegistrationFailedException extends RuntimeException{
-    public OrderRegistrationFailedException(String message) {
+public class DeliveryRegistrationFailedException extends RuntimeException{
+    public DeliveryRegistrationFailedException(String message) {
         super(message);
     }
 }

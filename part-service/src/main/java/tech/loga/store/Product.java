@@ -27,11 +27,11 @@ public class Product implements Serializable
     @Column(name = "brand")
     private String brand;
 
-    @Column(name = "designation")
-    private String designation;
+    @Column(name = "name")
+    private String name;
 
-    @Column(name = "description")
-    private String description;
+    @Column(name = "details")
+    private String details;
 
     @Column(name = "price")
     private Double price;

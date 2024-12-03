@@ -12,8 +12,8 @@
     <artifactId>customer-service</artifactId>
     <version>${project.parent.version}</version>
     <packaging>jar</packaging>
-    <name>customer-management</name>
-    <description>LoGa-GMAO customer management service</description>
+    <name>customer-service</name>
+    <description>customer management service</description>
 
     <properties>
         <java.version>19</java.version>

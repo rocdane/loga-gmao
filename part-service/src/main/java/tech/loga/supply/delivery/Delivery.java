@@ -1,12 +1,13 @@
-package tech.loga.delivery;
+package tech.loga.supply.delivery;
 
 import jakarta.persistence.*;
 import lombok.*;
-import tech.loga.order.Order;
-import tech.loga.supplier.Supplier;
+import tech.loga.supply.Article;
+import tech.loga.supply.order.Order;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 @Data
 @Entity
@@ -21,14 +22,14 @@ public class Delivery implements Serializable
     @Column(name = "id")
     private Long id;
 
-    @OneToOne(targetEntity = Supplier.class, fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
-    @JoinColumn(name = "supplier", referencedColumnName="id")
-    private Supplier supplier;
-
     @ManyToOne(targetEntity = Order.class, fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
-    @JoinColumn(name = "supply", referencedColumnName = "id")
+    @JoinColumn(name = "order", referencedColumnName = "id")
     private Order order;
 
-    @Column(name = "created_at")
-    private Date createdAt;
+    @OneToMany(targetEntity = Article.class, fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
+    @JoinColumn(name = "article", referencedColumnName = "id")
+    private List<Article> articles;
+
+    @Column(name = "delivered_at")
+    private Date deliveredAt;
 }

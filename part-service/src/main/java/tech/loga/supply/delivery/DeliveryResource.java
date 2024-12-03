@@ -1,4 +1,4 @@
-package tech.loga.delivery;
+package tech.loga.supply.delivery;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -24,13 +24,8 @@ public class DeliveryResource implements DeliveryManagement {
     }
 
     @Override
-    public List<Delivery> getAllDelivery() {
+    public List<Delivery> getAllDelivery(Long orderId) {
         return deliveryRepository.findAll();
-    }
-
-    @Override
-    public void editDelivery(Delivery delivery, Long id){
-
     }
 
     @Override

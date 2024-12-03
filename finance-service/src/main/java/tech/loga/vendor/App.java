@@ -20,7 +20,7 @@ import java.util.Properties;
 public class App {
 
     @Bean
-    CommandLineRunner init(){
+    CommandLineRunner init() {
         return args -> {
             log.info("Finance Service Initialized !!!");
         };

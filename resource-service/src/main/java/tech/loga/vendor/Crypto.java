@@ -25,8 +25,7 @@ public class Crypto
         try {
             this.key = this.generateKey(128);
             this.ivps = this.generateIv();
-        }
-        catch (NoSuchAlgorithmException e) {
+        }catch (NoSuchAlgorithmException e) {
             log.error("Crypto initialization failed : {}",e.getMessage());
             throw new RuntimeException("Crypto initialization failed : %s"+e.getMessage());
         }
